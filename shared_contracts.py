@@ -1,15 +1,13 @@
 """
 SentinelAI — Shared Contract Models
 =====================================
-Commit this file FIRST, before Person 1 and Person 2 branch off to build
-in parallel. Both services import these models AS-IS. Do not modify a
-field name/type without pinging your teammate first — this file is the
-entire reason two people can build separately and merge in an afternoon
-instead of a day.
+Single source of truth for the Person 1 (engine :8001) → Person 2
+(reasoning :8002) interface. Matches the INTERFACE CONTRACT doc §3 exactly.
+Both services import these models AS-IS. Do not modify a field name/type
+without pinging your teammate first.
 
 Person 1 (engine, port 8001)    PRODUCES: Case, CaseSummary, ComparisonMetric
 Person 2 (reasoning, port 8002) PRODUCES: EvidencePack, STRDraft, InvestigationResult
-Both consume each other's output types below.
 """
 
 from pydantic import BaseModel
@@ -28,7 +26,8 @@ class Transaction(BaseModel):
     amount: float
     currency: str = "INR"
     timestamp: datetime
-    typology_flag: Optional[str] = None  # "structuring" | "layering" | "smurfing" | ...
+    typology_flag: Optional[str] = None  # "structuring"|"layering"|"smurfing"|"round_tripping"|"funnel"|None (lowercase)
+    xgb_score: Optional[float] = None    # per-txn ML anomaly score 0..1 (Phase 4); None if unavailable — never fabricated
 
 
 class GraphEdge(BaseModel):
@@ -40,16 +39,31 @@ class GraphEdge(BaseModel):
 
 class Entity(BaseModel):
     id: str
-    type: Literal["Account", "Person", "Company", "PAN"]
+    type: Literal["Account", "Person", "Company", "PAN"]  # closed enum — shell-ness rides on entity_subtype/kyc_status
     name: Optional[str] = None
-    owner_pan: Optional[str] = None
+    owner_pan: Optional[str] = None      # required on Account entities in a ring
     director_of: Optional[List[str]] = None
+    kyc_status: Optional[Literal["VERIFIED", "PENDING", "FAILED"]] = None
+    entity_subtype: Optional[str] = None  # "Shell Company" | "Individual" | "Registered Business"
+    jurisdiction: Optional[str] = None    # "High Risk" | "Standard" | ...
+    linked_company: Optional[str] = None
 
 
 class RiskScore(BaseModel):
     p: float      # probe-predicted probability of risk, 0-1
     margin: float # |p - 0.5| * 2  -> confidence in the decision, 0-1
     ood: float    # mahalanobis distance from training centroid (OOD flag)
+
+
+class SharedPanGroup(BaseModel):
+    pan: str
+    accounts: List[str]  # >=2 account ids controlled by one PAN
+
+
+class AlertDetail(BaseModel):
+    account: str
+    alert_type: Literal["velocity", "threshold", "structuring"]
+    detail: str  # human-readable, e.g. "6 txns in 48h totalling $59.2k"
 
 
 class Case(BaseModel):
@@ -61,6 +75,8 @@ class Case(BaseModel):
     transactions: List[Transaction]
     graph_edges: List[GraphEdge]
     entities: List[Entity]
+    shared_pan_groups: List[SharedPanGroup] = []
+    alert_details: List[AlertDetail] = []
 
 
 class CaseSummary(BaseModel):
