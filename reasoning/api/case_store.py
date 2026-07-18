@@ -37,7 +37,9 @@ class CaseStore:
 
     def list_summaries(self, threshold: Optional[float] = None) -> List[CaseSummary]:
         if ENGINE_API_URL:
-            r = requests.get(f"{ENGINE_API_URL}/cases", timeout=30)
+            # engine default limit is 50 (top by risk_p -> all RED); pull the max
+            # page so the dashboard band counts reflect the real distribution
+            r = requests.get(f"{ENGINE_API_URL}/cases", params={"limit": 500}, timeout=30)
             r.raise_for_status()
             return [CaseSummary.model_validate(c) for c in r.json()]
         red = threshold if threshold is not None else RED_THRESHOLD
