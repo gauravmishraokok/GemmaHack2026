@@ -1,123 +1,4326 @@
 [
   {
-    "case_id": "CASE-001",
-    "risk": { "p": 0.91, "margin": 0.82, "ood": 1.4 },
+    "case_id": "CASE-000006",
+    "risk": {
+      "p": 0.9281,
+      "margin": 0.8562,
+      "ood": 13.6672
+    },
     "risk_band": "RED",
-    "member_alert_ids": ["ALR-1201", "ALR-1202", "ALR-1207", "ALR-1211", "ALR-1214", "ALR-1219"],
-    "accounts": ["ACC-1001", "ACC-1002", "ACC-2044"],
+    "member_alert_ids": [
+      "VEL-0617",
+      "VEL-0663",
+      "THR-0208",
+      "THR-0271",
+      "THR-0275"
+    ],
+    "accounts": [
+      "8000C76D0",
+      "8006FA4B0",
+      "801798880",
+      "8017F7FF0",
+      "801928280",
+      "802CCDF10",
+      "8044CB690",
+      "8049DF570",
+      "804A5FE50",
+      "8053B01E0",
+      "806F3C5B0",
+      "8078D10C0",
+      "808098770",
+      "808099880",
+      "808E44B10",
+      "809BBC7B0",
+      "809E26AD0",
+      "80A5176A0",
+      "80A948DB0",
+      "80A9491C0",
+      "80B8C96C0",
+      "80BFD9240",
+      "80C93DF00",
+      "80CA21140",
+      "80CAE3930",
+      "80D6DC9F0",
+      "80D8F53F0",
+      "80EADAC60",
+      "80EE5F840",
+      "8113EEDB0"
+    ],
     "transactions": [
-      { "txn_id": "TXN-90001", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 990000, "currency": "INR", "timestamp": "2026-06-02T10:14:00", "typology_flag": "structuring" },
-      { "txn_id": "TXN-90002", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 985000, "currency": "INR", "timestamp": "2026-06-02T15:42:00", "typology_flag": "structuring" },
-      { "txn_id": "TXN-90003", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 992500, "currency": "INR", "timestamp": "2026-06-03T09:05:00", "typology_flag": "structuring" },
-      { "txn_id": "TXN-90004", "from_account": "ACC-1002", "to_account": "ACC-2044", "amount": 988000, "currency": "INR", "timestamp": "2026-06-03T11:37:00", "typology_flag": "structuring" },
-      { "txn_id": "TXN-90005", "from_account": "ACC-1002", "to_account": "ACC-2044", "amount": 995000, "currency": "INR", "timestamp": "2026-06-04T10:02:00", "typology_flag": "structuring" },
-      { "txn_id": "TXN-90006", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 979000, "currency": "INR", "timestamp": "2026-06-04T16:48:00", "typology_flag": "structuring" }
+      {
+        "txn_id": "CASE-000006-TXN-0039176",
+        "from_account": "808E44B10",
+        "to_account": "804A5FE50",
+        "amount": 12481.86,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T12:17:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0016941",
+        "from_account": "80C93DF00",
+        "to_account": "8113EEDB0",
+        "amount": 13709.49,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-04T17:19:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0030317",
+        "from_account": "80C93DF00",
+        "to_account": "802CCDF10",
+        "amount": 12545.58,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-06T18:56:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0059147",
+        "from_account": "8078D10C0",
+        "to_account": "808E44B10",
+        "amount": 14586.55,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-04T09:01:00",
+        "typology_flag": null,
+        "xgb_score": 0.9518
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0011765",
+        "from_account": "8044CB690",
+        "to_account": "808E44B10",
+        "amount": 12620.48,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-04T16:19:00",
+        "typology_flag": null,
+        "xgb_score": 0.9515
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0090244",
+        "from_account": "8017F7FF0",
+        "to_account": "808E44B10",
+        "amount": 15093.58,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-03T18:24:00",
+        "typology_flag": null,
+        "xgb_score": 0.9515
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0012654",
+        "from_account": "801798880",
+        "to_account": "808E44B10",
+        "amount": 11659.57,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-03T14:20:00",
+        "typology_flag": null,
+        "xgb_score": 0.95
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0083424",
+        "from_account": "808099880",
+        "to_account": "808E44B10",
+        "amount": 8726.14,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-02T18:00:00",
+        "typology_flag": null,
+        "xgb_score": 0.949
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0090788",
+        "from_account": "808098770",
+        "to_account": "808E44B10",
+        "amount": 8508.56,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-03T08:02:00",
+        "typology_flag": null,
+        "xgb_score": 0.9471
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0089677",
+        "from_account": "80CA21140",
+        "to_account": "808E44B10",
+        "amount": 6603.64,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-01T19:11:00",
+        "typology_flag": null,
+        "xgb_score": 0.9467
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0040850",
+        "from_account": "80C93DF00",
+        "to_account": "801928280",
+        "amount": 12449.87,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T01:02:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9409
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0090815",
+        "from_account": "80C93DF00",
+        "to_account": "8000C76D0",
+        "amount": 12539.3,
+        "currency": "Swiss Franc",
+        "timestamp": "2022-09-04T09:42:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9368
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0092598",
+        "from_account": "809BBC7B0",
+        "to_account": "808E44B10",
+        "amount": 4795.61,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-01T11:49:00",
+        "typology_flag": null,
+        "xgb_score": 0.934
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0082918",
+        "from_account": "80C93DF00",
+        "to_account": "80BFD9240",
+        "amount": 5545.54,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T23:39:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9288
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0006125",
+        "from_account": "80C93DF00",
+        "to_account": "80D6DC9F0",
+        "amount": 32409.27,
+        "currency": "Brazil Real",
+        "timestamp": "2022-09-06T09:49:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9247
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0025339",
+        "from_account": "80A948DB0",
+        "to_account": "80A9491C0",
+        "amount": 18875.95,
+        "currency": "Yuan",
+        "timestamp": "2022-09-03T11:56:00",
+        "typology_flag": null,
+        "xgb_score": 0.9226
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0014920",
+        "from_account": "80CAE3930",
+        "to_account": "808E44B10",
+        "amount": 4389.01,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-01T11:05:00",
+        "typology_flag": null,
+        "xgb_score": 0.9219
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0016996",
+        "from_account": "8113EEDB0",
+        "to_account": "8053B01E0",
+        "amount": 998088.94,
+        "currency": "Rupee",
+        "timestamp": "2022-09-04T18:35:00",
+        "typology_flag": "structuring",
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0060412",
+        "from_account": "8000C76D0",
+        "to_account": "8053B01E0",
+        "amount": 823785.72,
+        "currency": "Rupee",
+        "timestamp": "2022-09-03T18:19:00",
+        "typology_flag": null,
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0069925",
+        "from_account": "802CCDF10",
+        "to_account": "8053B01E0",
+        "amount": 975628.1,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T18:29:00",
+        "typology_flag": "structuring",
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0075845",
+        "from_account": "80A9491C0",
+        "to_account": "8053B01E0",
+        "amount": 782356.91,
+        "currency": "Rupee",
+        "timestamp": "2022-09-04T18:20:00",
+        "typology_flag": null,
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0061006",
+        "from_account": "808E44B10",
+        "to_account": "80EADAC60",
+        "amount": 4824.53,
+        "currency": "Canadian Dollar",
+        "timestamp": "2022-09-05T09:56:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9128
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0050460",
+        "from_account": "80C93DF00",
+        "to_account": "809E26AD0",
+        "amount": 18376.77,
+        "currency": "Canadian Dollar",
+        "timestamp": "2022-09-03T08:27:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9118
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0023138",
+        "from_account": "80D6DC9F0",
+        "to_account": "8053B01E0",
+        "amount": 421547.26,
+        "currency": "Rupee",
+        "timestamp": "2022-09-03T14:54:00",
+        "typology_flag": null,
+        "xgb_score": 0.9112
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0097866",
+        "from_account": "80BFD9240",
+        "to_account": "8053B01E0",
+        "amount": 338769.92,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T16:48:00",
+        "typology_flag": null,
+        "xgb_score": 0.9112
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0089695",
+        "from_account": "80D8F53F0",
+        "to_account": "8053B01E0",
+        "amount": 183008.19,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T11:14:00",
+        "typology_flag": null,
+        "xgb_score": 0.91
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0079399",
+        "from_account": "80C93DF00",
+        "to_account": "80A9491C0",
+        "amount": 84987.3,
+        "currency": "Yuan",
+        "timestamp": "2022-09-04T16:48:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9084
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0063410",
+        "from_account": "806F3C5B0",
+        "to_account": "8053B01E0",
+        "amount": 371570.94,
+        "currency": "Rupee",
+        "timestamp": "2022-09-03T19:23:00",
+        "typology_flag": null,
+        "xgb_score": 0.9081
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0084285",
+        "from_account": "80EADAC60",
+        "to_account": "80EE5F840",
+        "amount": 2521.64,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T11:44:00",
+        "typology_flag": null,
+        "xgb_score": 0.9061
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0080894",
+        "from_account": "80C93DF00",
+        "to_account": "80D8F53F0",
+        "amount": 4322.01,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-05T20:45:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9016
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0072059",
+        "from_account": "80A5176A0",
+        "to_account": "8053B01E0",
+        "amount": 967537.34,
+        "currency": "Rupee",
+        "timestamp": "2022-09-04T03:09:00",
+        "typology_flag": "structuring",
+        "xgb_score": 0.887
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0000429",
+        "from_account": "80C93DF00",
+        "to_account": "806F3C5B0",
+        "amount": 385527.88,
+        "currency": "Ruble",
+        "timestamp": "2022-09-04T05:07:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.8797
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0019325",
+        "from_account": "809E26AD0",
+        "to_account": "8053B01E0",
+        "amount": 918374.42,
+        "currency": "Rupee",
+        "timestamp": "2022-09-04T22:58:00",
+        "typology_flag": null,
+        "xgb_score": 0.8751
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0082320",
+        "from_account": "801928280",
+        "to_account": "8053B01E0",
+        "amount": 1080988.21,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T22:21:00",
+        "typology_flag": null,
+        "xgb_score": 0.8751
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0048090",
+        "from_account": "80C93DF00",
+        "to_account": "80A5176A0",
+        "amount": 18611.96,
+        "currency": "Australian Dollar",
+        "timestamp": "2022-09-05T01:56:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.8706
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0020660",
+        "from_account": "80B8C96C0",
+        "to_account": "8053B01E0",
+        "amount": 45286.99,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T08:16:00",
+        "typology_flag": null,
+        "xgb_score": 0.8589
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0085508",
+        "from_account": "8049DF570",
+        "to_account": "8053B01E0",
+        "amount": 167361853.53,
+        "currency": "Rupee",
+        "timestamp": "2022-09-04T12:53:00",
+        "typology_flag": null,
+        "xgb_score": 0.8376
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0006290",
+        "from_account": "80C93DF00",
+        "to_account": "8049DF570",
+        "amount": 186385883.95,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T18:38:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.8329
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0070634",
+        "from_account": "80D8F53F0",
+        "to_account": "808E44B10",
+        "amount": 1416.94,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-03T05:33:00",
+        "typology_flag": null,
+        "xgb_score": 0.828
+      },
+      {
+        "txn_id": "CASE-000006-TXN-0005597",
+        "from_account": "8006FA4B0",
+        "to_account": "808E44B10",
+        "amount": 692.25,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-02T15:11:00",
+        "typology_flag": null,
+        "xgb_score": 0.7978
+      }
     ],
     "graph_edges": [
-      { "source": "ACC-1001", "target": "ACC-2044", "relation": "SENT", "weight": 4 },
-      { "source": "ACC-1002", "target": "ACC-2044", "relation": "SENT", "weight": 2 },
-      { "source": "ACC-1001", "target": "PAN-AABCX1234F", "relation": "LINKED_PAN", "weight": 1 },
-      { "source": "ACC-1002", "target": "PAN-AABCX1234F", "relation": "LINKED_PAN", "weight": 1 },
-      { "source": "ACC-1001", "target": "PER-RAVI-MENON", "relation": "OWNED_BY", "weight": 1 },
-      { "source": "ACC-1002", "target": "PER-RAVI-MENON", "relation": "OWNED_BY", "weight": 1 },
-      { "source": "ACC-2044", "target": "PER-DINESH-KHATRI", "relation": "OWNED_BY", "weight": 1 }
+      {
+        "source": "808E44B10",
+        "target": "804A5FE50",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "80C93DF00",
+        "target": "8113EEDB0",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "80C93DF00",
+        "target": "802CCDF10",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "8078D10C0",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.9518
+      },
+      {
+        "source": "8044CB690",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.9515
+      },
+      {
+        "source": "8017F7FF0",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.9515
+      },
+      {
+        "source": "801798880",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.95
+      },
+      {
+        "source": "808099880",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.949
+      },
+      {
+        "source": "808098770",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.9471
+      },
+      {
+        "source": "80CA21140",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.9467
+      },
+      {
+        "source": "80C93DF00",
+        "target": "801928280",
+        "relation": "SENT",
+        "weight": 0.9409
+      },
+      {
+        "source": "80C93DF00",
+        "target": "8000C76D0",
+        "relation": "SENT",
+        "weight": 0.9368
+      },
+      {
+        "source": "809BBC7B0",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.934
+      },
+      {
+        "source": "80C93DF00",
+        "target": "80BFD9240",
+        "relation": "SENT",
+        "weight": 0.9288
+      },
+      {
+        "source": "80C93DF00",
+        "target": "80D6DC9F0",
+        "relation": "SENT",
+        "weight": 0.9247
+      },
+      {
+        "source": "80A948DB0",
+        "target": "80A9491C0",
+        "relation": "SENT",
+        "weight": 0.9226
+      },
+      {
+        "source": "80CAE3930",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.9219
+      },
+      {
+        "source": "8113EEDB0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "8000C76D0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "802CCDF10",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "80A9491C0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "808E44B10",
+        "target": "80EADAC60",
+        "relation": "SENT",
+        "weight": 0.9128
+      },
+      {
+        "source": "80C93DF00",
+        "target": "809E26AD0",
+        "relation": "SENT",
+        "weight": 0.9118
+      },
+      {
+        "source": "80D6DC9F0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9112
+      },
+      {
+        "source": "80BFD9240",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9112
+      },
+      {
+        "source": "80D8F53F0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.91
+      },
+      {
+        "source": "80C93DF00",
+        "target": "80A9491C0",
+        "relation": "SENT",
+        "weight": 0.9084
+      },
+      {
+        "source": "806F3C5B0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.9081
+      },
+      {
+        "source": "80EADAC60",
+        "target": "80EE5F840",
+        "relation": "SENT",
+        "weight": 0.9061
+      },
+      {
+        "source": "80C93DF00",
+        "target": "80D8F53F0",
+        "relation": "SENT",
+        "weight": 0.9016
+      },
+      {
+        "source": "80A5176A0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.887
+      },
+      {
+        "source": "80C93DF00",
+        "target": "806F3C5B0",
+        "relation": "SENT",
+        "weight": 0.8797
+      },
+      {
+        "source": "809E26AD0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.8751
+      },
+      {
+        "source": "801928280",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.8751
+      },
+      {
+        "source": "80C93DF00",
+        "target": "80A5176A0",
+        "relation": "SENT",
+        "weight": 0.8706
+      },
+      {
+        "source": "80B8C96C0",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.8589
+      },
+      {
+        "source": "8049DF570",
+        "target": "8053B01E0",
+        "relation": "SENT",
+        "weight": 0.8376
+      },
+      {
+        "source": "80C93DF00",
+        "target": "8049DF570",
+        "relation": "SENT",
+        "weight": 0.8329
+      },
+      {
+        "source": "80D8F53F0",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.828
+      },
+      {
+        "source": "8006FA4B0",
+        "target": "808E44B10",
+        "relation": "SENT",
+        "weight": 0.7978
+      },
+      {
+        "source": "8000C76D0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8006FA4B0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801798880",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8017F7FF0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801928280",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "802CCDF10",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8044CB690",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8049DF570",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "804A5FE50",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8053B01E0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "806F3C5B0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8078D10C0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "808098770",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "808099880",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "808E44B10",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "809BBC7B0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "809E26AD0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80A5176A0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80A948DB0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80A9491C0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80B8C96C0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80BFD9240",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80C93DF00",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80CA21140",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80CAE3930",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80D6DC9F0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80D8F53F0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80EADAC60",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80EE5F840",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8113EEDB0",
+        "target": "PAN-TUOTE8885C",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      }
     ],
     "entities": [
-      { "id": "ACC-1001", "type": "Account", "name": "SB A/c ...41001", "owner_pan": "AABCX1234F", "director_of": null },
-      { "id": "ACC-1002", "type": "Account", "name": "CA A/c ...41002", "owner_pan": "AABCX1234F", "director_of": null },
-      { "id": "ACC-2044", "type": "Account", "name": "SB A/c ...52044", "owner_pan": "AFZPK7190K", "director_of": null },
-      { "id": "PAN-AABCX1234F", "type": "PAN", "name": "AABCX1234F", "owner_pan": null, "director_of": null },
-      { "id": "PER-RAVI-MENON", "type": "Person", "name": "Ravi Menon", "owner_pan": "AABCX1234F", "director_of": null },
-      { "id": "PER-DINESH-KHATRI", "type": "Person", "name": "Dinesh Khatri", "owner_pan": "AFZPK7190K", "director_of": null }
+      {
+        "id": "8000C76D0",
+        "type": "Account",
+        "name": "A/c 8000C76D0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8006FA4B0",
+        "type": "Account",
+        "name": "A/c 8006FA4B0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "801798880",
+        "type": "Account",
+        "name": "A/c 801798880",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8017F7FF0",
+        "type": "Account",
+        "name": "A/c 8017F7FF0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "801928280",
+        "type": "Account",
+        "name": "A/c 801928280",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "802CCDF10",
+        "type": "Account",
+        "name": "A/c 802CCDF10",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8044CB690",
+        "type": "Account",
+        "name": "A/c 8044CB690",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8049DF570",
+        "type": "Account",
+        "name": "A/c 8049DF570",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "804A5FE50",
+        "type": "Account",
+        "name": "A/c 804A5FE50",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8053B01E0",
+        "type": "Account",
+        "name": "A/c 8053B01E0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "806F3C5B0",
+        "type": "Account",
+        "name": "A/c 806F3C5B0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8078D10C0",
+        "type": "Account",
+        "name": "A/c 8078D10C0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "808098770",
+        "type": "Account",
+        "name": "A/c 808098770",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "808099880",
+        "type": "Account",
+        "name": "A/c 808099880",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "808E44B10",
+        "type": "Account",
+        "name": "A/c 808E44B10",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "809BBC7B0",
+        "type": "Account",
+        "name": "A/c 809BBC7B0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "809E26AD0",
+        "type": "Account",
+        "name": "A/c 809E26AD0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80A5176A0",
+        "type": "Account",
+        "name": "A/c 80A5176A0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80A948DB0",
+        "type": "Account",
+        "name": "A/c 80A948DB0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80A9491C0",
+        "type": "Account",
+        "name": "A/c 80A9491C0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80B8C96C0",
+        "type": "Account",
+        "name": "A/c 80B8C96C0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80BFD9240",
+        "type": "Account",
+        "name": "A/c 80BFD9240",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80C93DF00",
+        "type": "Account",
+        "name": "A/c 80C93DF00",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80CA21140",
+        "type": "Account",
+        "name": "A/c 80CA21140",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80CAE3930",
+        "type": "Account",
+        "name": "A/c 80CAE3930",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80D6DC9F0",
+        "type": "Account",
+        "name": "A/c 80D6DC9F0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80D8F53F0",
+        "type": "Account",
+        "name": "A/c 80D8F53F0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80EADAC60",
+        "type": "Account",
+        "name": "A/c 80EADAC60",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "80EE5F840",
+        "type": "Account",
+        "name": "A/c 80EE5F840",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "8113EEDB0",
+        "type": "Account",
+        "name": "A/c 8113EEDB0",
+        "owner_pan": "TUOTE8885C",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Aurora Ventures Pvt Ltd"
+      },
+      {
+        "id": "PAN-TUOTE8885C",
+        "type": "PAN",
+        "name": "TUOTE8885C",
+        "owner_pan": null,
+        "director_of": null,
+        "kyc_status": null,
+        "entity_subtype": null,
+        "jurisdiction": null,
+        "linked_company": null
+      }
+    ],
+    "shared_pan_groups": [
+      {
+        "pan": "TUOTE8885C",
+        "accounts": [
+          "8000C76D0",
+          "8006FA4B0",
+          "801798880",
+          "8017F7FF0",
+          "801928280",
+          "802CCDF10",
+          "8044CB690",
+          "8049DF570",
+          "804A5FE50",
+          "8053B01E0",
+          "806F3C5B0",
+          "8078D10C0",
+          "808098770",
+          "808099880",
+          "808E44B10",
+          "809BBC7B0",
+          "809E26AD0",
+          "80A5176A0",
+          "80A948DB0",
+          "80A9491C0",
+          "80B8C96C0",
+          "80BFD9240",
+          "80C93DF00",
+          "80CA21140",
+          "80CAE3930",
+          "80D6DC9F0",
+          "80D8F53F0",
+          "80EADAC60",
+          "80EE5F840",
+          "8113EEDB0"
+        ]
+      }
+    ],
+    "alert_details": [
+      {
+        "account": "808E44B10",
+        "alert_type": "velocity",
+        "detail": "14 outbound transactions within a 48h window totalling 4,879,976"
+      },
+      {
+        "account": "80C93DF00",
+        "alert_type": "velocity",
+        "detail": "13 outbound transactions within a 48h window totalling 186,987,444"
+      },
+      {
+        "account": "8113EEDB0",
+        "alert_type": "threshold",
+        "detail": "Transfer of 998,089 to 8053B01E0 just under the 1,000,000 reporting threshold"
+      },
+      {
+        "account": "802CCDF10",
+        "alert_type": "threshold",
+        "detail": "Transfer of 975,628 to 8053B01E0 just under the 1,000,000 reporting threshold"
+      },
+      {
+        "account": "80A5176A0",
+        "alert_type": "threshold",
+        "detail": "Transfer of 967,537 to 8053B01E0 just under the 1,000,000 reporting threshold"
+      }
     ]
   },
   {
-    "case_id": "CASE-002",
-    "risk": { "p": 0.84, "margin": 0.68, "ood": 2.1 },
+    "case_id": "CASE-000002",
+    "risk": {
+      "p": 0.9134,
+      "margin": 0.8267,
+      "ood": 15.1472
+    },
     "risk_band": "RED",
-    "member_alert_ids": ["ALR-2301", "ALR-2305", "ALR-2308", "ALR-2312"],
-    "accounts": ["ACC-3001", "ACC-3002", "ACC-3003"],
+    "member_alert_ids": [
+      "VEL-0136",
+      "VEL-0252",
+      "VEL-0391"
+    ],
+    "accounts": [
+      "80006A5E0",
+      "80010C0B0",
+      "80011F990",
+      "8001B0770",
+      "8001BB380",
+      "8001D8590",
+      "80020C2A0",
+      "80022FC00",
+      "800449990",
+      "80045FE30",
+      "800550B60",
+      "80066B990",
+      "80069EE60",
+      "800737690",
+      "8007486D0",
+      "80079AFA0",
+      "80087EA60",
+      "8008B29B0",
+      "800AAF0B0",
+      "800ADE000",
+      "800B7DA00",
+      "800C5D910",
+      "800EF7C00",
+      "800F57D60",
+      "801485510",
+      "8014CBA10",
+      "801545F20",
+      "80154AAF0",
+      "801E76F80",
+      "801EE5CA0"
+    ],
     "transactions": [
-      { "txn_id": "TXN-91001", "from_account": "ACC-3001", "to_account": "ACC-3002", "amount": 2400000, "currency": "INR", "timestamp": "2026-06-08T11:20:00", "typology_flag": "layering" },
-      { "txn_id": "TXN-91002", "from_account": "ACC-3002", "to_account": "ACC-3003", "amount": 2380000, "currency": "INR", "timestamp": "2026-06-09T14:05:00", "typology_flag": "layering" },
-      { "txn_id": "TXN-91003", "from_account": "ACC-3003", "to_account": "ACC-3001", "amount": 2355000, "currency": "INR", "timestamp": "2026-06-11T09:44:00", "typology_flag": "layering" },
-      { "txn_id": "TXN-91004", "from_account": "ACC-3001", "to_account": "ACC-3002", "amount": 1250000, "currency": "INR", "timestamp": "2026-06-12T16:30:00", "typology_flag": "layering" },
-      { "txn_id": "TXN-91005", "from_account": "ACC-3002", "to_account": "ACC-3003", "amount": 1238000, "currency": "INR", "timestamp": "2026-06-13T10:12:00", "typology_flag": "layering" }
+      {
+        "txn_id": "CASE-000002-TXN-0028224",
+        "from_account": "8014CBA10",
+        "to_account": "80154AAF0",
+        "amount": 14926.35,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T07:54:00",
+        "typology_flag": null,
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0080151",
+        "from_account": "800737690",
+        "to_account": "800AAF0B0",
+        "amount": 15197.45,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T09:29:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0084381",
+        "from_account": "800737690",
+        "to_account": "800449990",
+        "amount": 19332.59,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-04T07:35:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0005605",
+        "from_account": "800737690",
+        "to_account": "8007486D0",
+        "amount": 15224.53,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T15:48:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0005753",
+        "from_account": "80154AAF0",
+        "to_account": "801EE5CA0",
+        "amount": 15839.9,
+        "currency": "Euro",
+        "timestamp": "2022-09-09T18:18:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0022798",
+        "from_account": "8001BB380",
+        "to_account": "8001B0770",
+        "amount": 14136.49,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T18:07:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0052781",
+        "from_account": "80154AAF0",
+        "to_account": "80010C0B0",
+        "amount": 16896.52,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-11T19:16:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0059088",
+        "from_account": "8001BB380",
+        "to_account": "80011F990",
+        "amount": 14351.99,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T16:27:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0077526",
+        "from_account": "800737690",
+        "to_account": "80066B990",
+        "amount": 12536.92,
+        "currency": "Euro",
+        "timestamp": "2022-09-01T14:11:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0097054",
+        "from_account": "800B7DA00",
+        "to_account": "80154AAF0",
+        "amount": 13267.86,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T16:36:00",
+        "typology_flag": null,
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0007991",
+        "from_account": "801E76F80",
+        "to_account": "80154AAF0",
+        "amount": 9588.26,
+        "currency": "Euro",
+        "timestamp": "2022-09-07T11:06:00",
+        "typology_flag": null,
+        "xgb_score": 0.9531
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0039507",
+        "from_account": "80020C2A0",
+        "to_account": "80154AAF0",
+        "amount": 10495.13,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T12:42:00",
+        "typology_flag": null,
+        "xgb_score": 0.9531
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0049796",
+        "from_account": "80154AAF0",
+        "to_account": "800C5D910",
+        "amount": 9612.33,
+        "currency": "Euro",
+        "timestamp": "2022-09-10T11:09:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9531
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0008758",
+        "from_account": "8001BB380",
+        "to_account": "80022FC00",
+        "amount": 9947.89,
+        "currency": "Euro",
+        "timestamp": "2022-09-03T14:22:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9528
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0024849",
+        "from_account": "801485510",
+        "to_account": "80154AAF0",
+        "amount": 11229.81,
+        "currency": "Euro",
+        "timestamp": "2022-09-08T17:38:00",
+        "typology_flag": null,
+        "xgb_score": 0.9528
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0094928",
+        "from_account": "80154AAF0",
+        "to_account": "800ADE000",
+        "amount": 9346.23,
+        "currency": "Euro",
+        "timestamp": "2022-09-08T19:06:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9528
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0032613",
+        "from_account": "80154AAF0",
+        "to_account": "80069EE60",
+        "amount": 9836.0,
+        "currency": "Euro",
+        "timestamp": "2022-09-08T07:04:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9527
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0095979",
+        "from_account": "800EF7C00",
+        "to_account": "80154AAF0",
+        "amount": 8989.95,
+        "currency": "Euro",
+        "timestamp": "2022-09-07T13:36:00",
+        "typology_flag": null,
+        "xgb_score": 0.9527
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0083310",
+        "from_account": "8001BB380",
+        "to_account": "800550B60",
+        "amount": 5851.21,
+        "currency": "Euro",
+        "timestamp": "2022-09-03T16:58:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9497
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0061559",
+        "from_account": "800F57D60",
+        "to_account": "80154AAF0",
+        "amount": 5959.02,
+        "currency": "Euro",
+        "timestamp": "2022-09-05T09:30:00",
+        "typology_flag": null,
+        "xgb_score": 0.9494
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0095369",
+        "from_account": "8008B29B0",
+        "to_account": "80154AAF0",
+        "amount": 4971.01,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T08:02:00",
+        "typology_flag": null,
+        "xgb_score": 0.9446
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0009667",
+        "from_account": "80045FE30",
+        "to_account": "80154AAF0",
+        "amount": 11508.67,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T21:34:00",
+        "typology_flag": null,
+        "xgb_score": 0.9434
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0072749",
+        "from_account": "800550B60",
+        "to_account": "80154AAF0",
+        "amount": 15700.82,
+        "currency": "Euro",
+        "timestamp": "2022-09-05T00:57:00",
+        "typology_flag": null,
+        "xgb_score": 0.9297
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0066920",
+        "from_account": "800737690",
+        "to_account": "80006A5E0",
+        "amount": 35642.49,
+        "currency": "Yuan",
+        "timestamp": "2022-09-01T09:14:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9247
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0010709",
+        "from_account": "80154AAF0",
+        "to_account": "801545F20",
+        "amount": 4867.32,
+        "currency": "Euro",
+        "timestamp": "2022-09-11T03:03:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9143
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0044583",
+        "from_account": "80154AAF0",
+        "to_account": "80079AFA0",
+        "amount": 91564.18,
+        "currency": "Yuan",
+        "timestamp": "2022-09-11T13:16:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9089
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0057520",
+        "from_account": "8001BB380",
+        "to_account": "8001D8590",
+        "amount": 2380.42,
+        "currency": "Euro",
+        "timestamp": "2022-09-02T13:30:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.903
+      },
+      {
+        "txn_id": "CASE-000002-TXN-0007784",
+        "from_account": "80087EA60",
+        "to_account": "80154AAF0",
+        "amount": 1796.77,
+        "currency": "Euro",
+        "timestamp": "2022-09-07T13:16:00",
+        "typology_flag": null,
+        "xgb_score": 0.8958
+      }
     ],
     "graph_edges": [
-      { "source": "ACC-3001", "target": "ACC-3002", "relation": "SENT", "weight": 2 },
-      { "source": "ACC-3002", "target": "ACC-3003", "relation": "SENT", "weight": 2 },
-      { "source": "ACC-3003", "target": "ACC-3001", "relation": "SENT", "weight": 1 },
-      { "source": "ACC-3002", "target": "COM-MERIDIAN", "relation": "OWNED_BY", "weight": 1 },
-      { "source": "ACC-3003", "target": "COM-KAVERI", "relation": "OWNED_BY", "weight": 1 },
-      { "source": "PER-SURESH-NAIR", "target": "COM-MERIDIAN", "relation": "DIRECTOR_OF", "weight": 1 },
-      { "source": "PER-SURESH-NAIR", "target": "COM-KAVERI", "relation": "DIRECTOR_OF", "weight": 1 },
-      { "source": "ACC-3001", "target": "PER-SURESH-NAIR", "relation": "OWNED_BY", "weight": 1 }
+      {
+        "source": "8014CBA10",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "800737690",
+        "target": "800AAF0B0",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "800737690",
+        "target": "800449990",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "800737690",
+        "target": "8007486D0",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "80154AAF0",
+        "target": "801EE5CA0",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "8001BB380",
+        "target": "8001B0770",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "80154AAF0",
+        "target": "80010C0B0",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "8001BB380",
+        "target": "80011F990",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "800737690",
+        "target": "80066B990",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "800B7DA00",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "801E76F80",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9531
+      },
+      {
+        "source": "80020C2A0",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9531
+      },
+      {
+        "source": "80154AAF0",
+        "target": "800C5D910",
+        "relation": "SENT",
+        "weight": 0.9531
+      },
+      {
+        "source": "8001BB380",
+        "target": "80022FC00",
+        "relation": "SENT",
+        "weight": 0.9528
+      },
+      {
+        "source": "801485510",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9528
+      },
+      {
+        "source": "80154AAF0",
+        "target": "800ADE000",
+        "relation": "SENT",
+        "weight": 0.9528
+      },
+      {
+        "source": "80154AAF0",
+        "target": "80069EE60",
+        "relation": "SENT",
+        "weight": 0.9527
+      },
+      {
+        "source": "800EF7C00",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9527
+      },
+      {
+        "source": "8001BB380",
+        "target": "800550B60",
+        "relation": "SENT",
+        "weight": 0.9497
+      },
+      {
+        "source": "800F57D60",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9494
+      },
+      {
+        "source": "8008B29B0",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9446
+      },
+      {
+        "source": "80045FE30",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9434
+      },
+      {
+        "source": "800550B60",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.9297
+      },
+      {
+        "source": "800737690",
+        "target": "80006A5E0",
+        "relation": "SENT",
+        "weight": 0.9247
+      },
+      {
+        "source": "80154AAF0",
+        "target": "801545F20",
+        "relation": "SENT",
+        "weight": 0.9143
+      },
+      {
+        "source": "80154AAF0",
+        "target": "80079AFA0",
+        "relation": "SENT",
+        "weight": 0.9089
+      },
+      {
+        "source": "8001BB380",
+        "target": "8001D8590",
+        "relation": "SENT",
+        "weight": 0.903
+      },
+      {
+        "source": "80087EA60",
+        "target": "80154AAF0",
+        "relation": "SENT",
+        "weight": 0.8958
+      },
+      {
+        "source": "80006A5E0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80010C0B0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80011F990",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001B0770",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001BB380",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001D8590",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80020C2A0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80022FC00",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800449990",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80045FE30",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800550B60",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80066B990",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80069EE60",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800737690",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8007486D0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80079AFA0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80087EA60",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8008B29B0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800AAF0B0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800ADE000",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800B7DA00",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800C5D910",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800EF7C00",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800F57D60",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801485510",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8014CBA10",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801545F20",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80154AAF0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801E76F80",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801EE5CA0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      }
     ],
     "entities": [
-      { "id": "ACC-3001", "type": "Account", "name": "CA A/c ...63001", "owner_pan": "BLQPS8821D", "director_of": null },
-      { "id": "ACC-3002", "type": "Account", "name": "CA A/c ...63002 (Meridian Exports)", "owner_pan": "AAECM4412G", "director_of": null },
-      { "id": "ACC-3003", "type": "Account", "name": "CA A/c ...63003 (Kaveri Trading)", "owner_pan": "AAECK9034J", "director_of": null },
-      { "id": "COM-MERIDIAN", "type": "Company", "name": "Meridian Exports Pvt Ltd", "owner_pan": "AAECM4412G", "director_of": null },
-      { "id": "COM-KAVERI", "type": "Company", "name": "Kaveri Trading Co Pvt Ltd", "owner_pan": "AAECK9034J", "director_of": null },
-      { "id": "PER-SURESH-NAIR", "type": "Person", "name": "Suresh Nair", "owner_pan": "BLQPS8821D", "director_of": ["COM-MERIDIAN", "COM-KAVERI"] }
+      {
+        "id": "80006A5E0",
+        "type": "Account",
+        "name": "A/c 80006A5E0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80010C0B0",
+        "type": "Account",
+        "name": "A/c 80010C0B0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80011F990",
+        "type": "Account",
+        "name": "A/c 80011F990",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001B0770",
+        "type": "Account",
+        "name": "A/c 8001B0770",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001BB380",
+        "type": "Account",
+        "name": "A/c 8001BB380",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001D8590",
+        "type": "Account",
+        "name": "A/c 8001D8590",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80020C2A0",
+        "type": "Account",
+        "name": "A/c 80020C2A0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80022FC00",
+        "type": "Account",
+        "name": "A/c 80022FC00",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800449990",
+        "type": "Account",
+        "name": "A/c 800449990",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80045FE30",
+        "type": "Account",
+        "name": "A/c 80045FE30",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800550B60",
+        "type": "Account",
+        "name": "A/c 800550B60",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80066B990",
+        "type": "Account",
+        "name": "A/c 80066B990",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80069EE60",
+        "type": "Account",
+        "name": "A/c 80069EE60",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800737690",
+        "type": "Account",
+        "name": "A/c 800737690",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8007486D0",
+        "type": "Account",
+        "name": "A/c 8007486D0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80079AFA0",
+        "type": "Account",
+        "name": "A/c 80079AFA0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80087EA60",
+        "type": "Account",
+        "name": "A/c 80087EA60",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8008B29B0",
+        "type": "Account",
+        "name": "A/c 8008B29B0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800AAF0B0",
+        "type": "Account",
+        "name": "A/c 800AAF0B0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800ADE000",
+        "type": "Account",
+        "name": "A/c 800ADE000",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800B7DA00",
+        "type": "Account",
+        "name": "A/c 800B7DA00",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800C5D910",
+        "type": "Account",
+        "name": "A/c 800C5D910",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800EF7C00",
+        "type": "Account",
+        "name": "A/c 800EF7C00",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800F57D60",
+        "type": "Account",
+        "name": "A/c 800F57D60",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "801485510",
+        "type": "Account",
+        "name": "A/c 801485510",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8014CBA10",
+        "type": "Account",
+        "name": "A/c 8014CBA10",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "801545F20",
+        "type": "Account",
+        "name": "A/c 801545F20",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80154AAF0",
+        "type": "Account",
+        "name": "A/c 80154AAF0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "801E76F80",
+        "type": "Account",
+        "name": "A/c 801E76F80",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "801EE5CA0",
+        "type": "Account",
+        "name": "A/c 801EE5CA0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "PAN-IZGWC0456E",
+        "type": "PAN",
+        "name": "IZGWC0456E",
+        "owner_pan": null,
+        "director_of": null,
+        "kyc_status": null,
+        "entity_subtype": null,
+        "jurisdiction": null,
+        "linked_company": null
+      }
+    ],
+    "shared_pan_groups": [
+      {
+        "pan": "IZGWC0456E",
+        "accounts": [
+          "80006A5E0",
+          "80010C0B0",
+          "80011F990",
+          "8001B0770",
+          "8001BB380",
+          "8001D8590",
+          "80020C2A0",
+          "80022FC00",
+          "800449990",
+          "80045FE30",
+          "800550B60",
+          "80066B990",
+          "80069EE60",
+          "800737690",
+          "8007486D0",
+          "80079AFA0",
+          "80087EA60",
+          "8008B29B0",
+          "800AAF0B0",
+          "800ADE000",
+          "800B7DA00",
+          "800C5D910",
+          "800EF7C00",
+          "800F57D60",
+          "801485510",
+          "8014CBA10",
+          "801545F20",
+          "80154AAF0",
+          "801E76F80",
+          "801EE5CA0"
+        ]
+      }
+    ],
+    "alert_details": [
+      {
+        "account": "8001BB380",
+        "alert_type": "velocity",
+        "detail": "12 outbound transactions within a 48h window totalling 69,494"
+      },
+      {
+        "account": "800737690",
+        "alert_type": "velocity",
+        "detail": "16 outbound transactions within a 48h window totalling 5,902,221"
+      },
+      {
+        "account": "80154AAF0",
+        "alert_type": "velocity",
+        "detail": "15 outbound transactions within a 48h window totalling 323,626"
+      }
     ]
   },
   {
-    "case_id": "CASE-003",
-    "risk": { "p": 0.56, "margin": 0.12, "ood": 0.9 },
-    "risk_band": "YELLOW",
-    "member_alert_ids": ["ALR-3401", "ALR-3402", "ALR-3406"],
-    "accounts": ["ACC-4101", "ACC-4102", "ACC-4103", "ACC-4104", "ACC-4105", "ACC-4106", "ACC-4500"],
+    "case_id": "CASE-000035",
+    "risk": {
+      "p": 0.905,
+      "margin": 0.8101,
+      "ood": 10.3695
+    },
+    "risk_band": "RED",
+    "member_alert_ids": [
+      "VEL-0481",
+      "THR-0190",
+      "THR-0211"
+    ],
+    "accounts": [
+      "800B047D0",
+      "80102A1F0",
+      "801EA1CE0",
+      "80227FC50",
+      "8027CB4E0",
+      "8028DCAE0",
+      "803144A90",
+      "803366440",
+      "8036AE1C0",
+      "8055F7FF0",
+      "805D4C850",
+      "80605A3E0",
+      "80636A7A0",
+      "806482430",
+      "8069E9C80",
+      "806F416F0",
+      "808728C10"
+    ],
     "transactions": [
-      { "txn_id": "TXN-92001", "from_account": "ACC-4101", "to_account": "ACC-4500", "amount": 49500, "currency": "INR", "timestamp": "2026-06-15T09:10:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92002", "from_account": "ACC-4102", "to_account": "ACC-4500", "amount": 48750, "currency": "INR", "timestamp": "2026-06-15T09:26:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92003", "from_account": "ACC-4103", "to_account": "ACC-4500", "amount": 47900, "currency": "INR", "timestamp": "2026-06-15T10:02:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92004", "from_account": "ACC-4104", "to_account": "ACC-4500", "amount": 49900, "currency": "INR", "timestamp": "2026-06-15T10:44:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92005", "from_account": "ACC-4105", "to_account": "ACC-4500", "amount": 46500, "currency": "INR", "timestamp": "2026-06-15T11:18:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92006", "from_account": "ACC-4106", "to_account": "ACC-4500", "amount": 48200, "currency": "INR", "timestamp": "2026-06-15T11:55:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92007", "from_account": "ACC-4101", "to_account": "ACC-4500", "amount": 45800, "currency": "INR", "timestamp": "2026-06-16T09:31:00", "typology_flag": "smurfing" },
-      { "txn_id": "TXN-92008", "from_account": "ACC-4102", "to_account": "ACC-4500", "amount": 49100, "currency": "INR", "timestamp": "2026-06-16T10:07:00", "typology_flag": "smurfing" }
+      {
+        "txn_id": "CASE-000035-TXN-0001946",
+        "from_account": "803366440",
+        "to_account": "8055F7FF0",
+        "amount": 794068.8,
+        "currency": "Rupee",
+        "timestamp": "2022-09-04T18:25:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0001993",
+        "from_account": "8027CB4E0",
+        "to_account": "805D4C850",
+        "amount": 977235.85,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T05:28:00",
+        "typology_flag": "structuring",
+        "xgb_score": 0.8913
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0006009",
+        "from_account": "806F416F0",
+        "to_account": "805D4C850",
+        "amount": 306034.83,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T12:20:00",
+        "typology_flag": null,
+        "xgb_score": 0.914
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0006713",
+        "from_account": "803366440",
+        "to_account": "8027CB4E0",
+        "amount": 13305.86,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-04T11:47:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0007764",
+        "from_account": "803366440",
+        "to_account": "806F416F0",
+        "amount": 391296.46,
+        "currency": "Ruble",
+        "timestamp": "2022-09-03T08:27:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9112
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0012566",
+        "from_account": "8036AE1C0",
+        "to_account": "805D4C850",
+        "amount": 564572.32,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T05:08:00",
+        "typology_flag": null,
+        "xgb_score": 0.8797
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0013029",
+        "from_account": "803366440",
+        "to_account": "808728C10",
+        "amount": 9479.43,
+        "currency": "UK Pound",
+        "timestamp": "2022-09-02T14:20:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9495
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0015678",
+        "from_account": "8055F7FF0",
+        "to_account": "805D4C850",
+        "amount": 728042.8,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T12:38:00",
+        "typology_flag": null,
+        "xgb_score": 0.92
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0015784",
+        "from_account": "803366440",
+        "to_account": "80636A7A0",
+        "amount": 1436179.23,
+        "currency": "Ruble",
+        "timestamp": "2022-09-03T06:18:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0016936",
+        "from_account": "80636A7A0",
+        "to_account": "805D4C850",
+        "amount": 1336799.04,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T11:07:00",
+        "typology_flag": null,
+        "xgb_score": 0.92
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0017123",
+        "from_account": "803366440",
+        "to_account": "800B047D0",
+        "amount": 18379.68,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T10:24:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0021088",
+        "from_account": "80227FC50",
+        "to_account": "805D4C850",
+        "amount": 977697.65,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T06:11:00",
+        "typology_flag": "structuring",
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0026431",
+        "from_account": "803144A90",
+        "to_account": "805D4C850",
+        "amount": 512472.18,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T14:50:00",
+        "typology_flag": null,
+        "xgb_score": 0.9112
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0030207",
+        "from_account": "803366440",
+        "to_account": "801EA1CE0",
+        "amount": 9304.22,
+        "currency": "Euro",
+        "timestamp": "2022-09-03T14:42:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9528
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0037970",
+        "from_account": "80605A3E0",
+        "to_account": "805D4C850",
+        "amount": 124323.63,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T00:17:00",
+        "typology_flag": null,
+        "xgb_score": 0.8258
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0042260",
+        "from_account": "8069E9C80",
+        "to_account": "805D4C850",
+        "amount": 54284.79,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T01:14:00",
+        "typology_flag": null,
+        "xgb_score": 0.8143
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0049600",
+        "from_account": "803366440",
+        "to_account": "8036AE1C0",
+        "amount": 43038.53,
+        "currency": "Yuan",
+        "timestamp": "2022-09-02T15:19:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9264
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0061536",
+        "from_account": "803366440",
+        "to_account": "8069E9C80",
+        "amount": 724.18,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T11:03:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.8082
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0062916",
+        "from_account": "803366440",
+        "to_account": "80227FC50",
+        "amount": 13312.15,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T03:44:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9414
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0067968",
+        "from_account": "806482430",
+        "to_account": "805D4C850",
+        "amount": 1378847.99,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T11:25:00",
+        "typology_flag": null,
+        "xgb_score": 0.92
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0068818",
+        "from_account": "803366440",
+        "to_account": "806482430",
+        "amount": 1460703.25,
+        "currency": "Ruble",
+        "timestamp": "2022-09-04T16:46:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0076505",
+        "from_account": "803366440",
+        "to_account": "803144A90",
+        "amount": 46734.02,
+        "currency": "Yuan",
+        "timestamp": "2022-09-03T12:16:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9268
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0078194",
+        "from_account": "8028DCAE0",
+        "to_account": "805D4C850",
+        "amount": 214491.64,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T20:29:00",
+        "typology_flag": null,
+        "xgb_score": 0.8899
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0079280",
+        "from_account": "803366440",
+        "to_account": "80605A3E0",
+        "amount": 1692.77,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-04T10:00:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.8887
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0079753",
+        "from_account": "801EA1CE0",
+        "to_account": "805D4C850",
+        "amount": 840441.34,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T16:21:00",
+        "typology_flag": null,
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0080177",
+        "from_account": "803366440",
+        "to_account": "8028DCAE0",
+        "amount": 2924.84,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T08:05:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9012
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0082209",
+        "from_account": "808728C10",
+        "to_account": "805D4C850",
+        "amount": 753279.46,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T01:21:00",
+        "typology_flag": null,
+        "xgb_score": 0.8756
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0082338",
+        "from_account": "80102A1F0",
+        "to_account": "805D4C850",
+        "amount": 1429120.17,
+        "currency": "Rupee",
+        "timestamp": "2022-09-06T08:36:00",
+        "typology_flag": null,
+        "xgb_score": 0.9174
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0085081",
+        "from_account": "803366440",
+        "to_account": "80102A1F0",
+        "amount": 16606.0,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T13:40:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000035-TXN-0090789",
+        "from_account": "800B047D0",
+        "to_account": "805D4C850",
+        "amount": 1256081.74,
+        "currency": "Rupee",
+        "timestamp": "2022-09-05T14:16:00",
+        "typology_flag": null,
+        "xgb_score": 0.9174
+      }
     ],
     "graph_edges": [
-      { "source": "ACC-4101", "target": "ACC-4500", "relation": "SENT", "weight": 2 },
-      { "source": "ACC-4102", "target": "ACC-4500", "relation": "SENT", "weight": 2 },
-      { "source": "ACC-4103", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
-      { "source": "ACC-4104", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
-      { "source": "ACC-4105", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
-      { "source": "ACC-4106", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
-      { "source": "ACC-4101", "target": "PAN-DKJPM3345H", "relation": "LINKED_PAN", "weight": 1 },
-      { "source": "ACC-4102", "target": "PAN-DKJPM3345H", "relation": "LINKED_PAN", "weight": 1 },
-      { "source": "ACC-4500", "target": "PER-ASHA-VERMA", "relation": "OWNED_BY", "weight": 1 }
+      {
+        "source": "803366440",
+        "target": "8055F7FF0",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "8027CB4E0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.8913
+      },
+      {
+        "source": "806F416F0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.914
+      },
+      {
+        "source": "803366440",
+        "target": "8027CB4E0",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "803366440",
+        "target": "806F416F0",
+        "relation": "SENT",
+        "weight": 0.9112
+      },
+      {
+        "source": "8036AE1C0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.8797
+      },
+      {
+        "source": "803366440",
+        "target": "808728C10",
+        "relation": "SENT",
+        "weight": 0.9495
+      },
+      {
+        "source": "8055F7FF0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.92
+      },
+      {
+        "source": "803366440",
+        "target": "80636A7A0",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "80636A7A0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.92
+      },
+      {
+        "source": "803366440",
+        "target": "800B047D0",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "80227FC50",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "803144A90",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.9112
+      },
+      {
+        "source": "803366440",
+        "target": "801EA1CE0",
+        "relation": "SENT",
+        "weight": 0.9528
+      },
+      {
+        "source": "80605A3E0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.8258
+      },
+      {
+        "source": "8069E9C80",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.8143
+      },
+      {
+        "source": "803366440",
+        "target": "8036AE1C0",
+        "relation": "SENT",
+        "weight": 0.9264
+      },
+      {
+        "source": "803366440",
+        "target": "8069E9C80",
+        "relation": "SENT",
+        "weight": 0.8082
+      },
+      {
+        "source": "803366440",
+        "target": "80227FC50",
+        "relation": "SENT",
+        "weight": 0.9414
+      },
+      {
+        "source": "806482430",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.92
+      },
+      {
+        "source": "803366440",
+        "target": "806482430",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "803366440",
+        "target": "803144A90",
+        "relation": "SENT",
+        "weight": 0.9268
+      },
+      {
+        "source": "8028DCAE0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.8899
+      },
+      {
+        "source": "803366440",
+        "target": "80605A3E0",
+        "relation": "SENT",
+        "weight": 0.8887
+      },
+      {
+        "source": "801EA1CE0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "803366440",
+        "target": "8028DCAE0",
+        "relation": "SENT",
+        "weight": 0.9012
+      },
+      {
+        "source": "808728C10",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.8756
+      },
+      {
+        "source": "80102A1F0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "803366440",
+        "target": "80102A1F0",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "800B047D0",
+        "target": "805D4C850",
+        "relation": "SENT",
+        "weight": 0.9174
+      },
+      {
+        "source": "800B047D0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80102A1F0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "801EA1CE0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80227FC50",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8027CB4E0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8028DCAE0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "803144A90",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "803366440",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8036AE1C0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8055F7FF0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "805D4C850",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80605A3E0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80636A7A0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "806482430",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8069E9C80",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "806F416F0",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "808728C10",
+        "target": "PAN-SJWHE1520I",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      }
     ],
     "entities": [
-      { "id": "ACC-4101", "type": "Account", "name": "SB A/c ...74101", "owner_pan": "DKJPM3345H", "director_of": null },
-      { "id": "ACC-4102", "type": "Account", "name": "SB A/c ...74102", "owner_pan": "DKJPM3345H", "director_of": null },
-      { "id": "ACC-4103", "type": "Account", "name": "SB A/c ...74103", "owner_pan": "CWGPR6674L", "director_of": null },
-      { "id": "ACC-4104", "type": "Account", "name": "SB A/c ...74104", "owner_pan": "FHLPB2210Q", "director_of": null },
-      { "id": "ACC-4105", "type": "Account", "name": "SB A/c ...74105", "owner_pan": "GKTPD8859M", "director_of": null },
-      { "id": "ACC-4106", "type": "Account", "name": "SB A/c ...74106", "owner_pan": "HZNPC4437B", "director_of": null },
-      { "id": "ACC-4500", "type": "Account", "name": "SB A/c ...84500", "owner_pan": "EQYPV5518C", "director_of": null },
-      { "id": "PAN-DKJPM3345H", "type": "PAN", "name": "DKJPM3345H", "owner_pan": null, "director_of": null },
-      { "id": "PER-ASHA-VERMA", "type": "Person", "name": "Asha Verma", "owner_pan": "EQYPV5518C", "director_of": null }
+      {
+        "id": "800B047D0",
+        "type": "Account",
+        "name": "A/c 800B047D0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "80102A1F0",
+        "type": "Account",
+        "name": "A/c 80102A1F0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "801EA1CE0",
+        "type": "Account",
+        "name": "A/c 801EA1CE0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "80227FC50",
+        "type": "Account",
+        "name": "A/c 80227FC50",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "8027CB4E0",
+        "type": "Account",
+        "name": "A/c 8027CB4E0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "8028DCAE0",
+        "type": "Account",
+        "name": "A/c 8028DCAE0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "803144A90",
+        "type": "Account",
+        "name": "A/c 803144A90",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "803366440",
+        "type": "Account",
+        "name": "A/c 803366440",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "8036AE1C0",
+        "type": "Account",
+        "name": "A/c 8036AE1C0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "8055F7FF0",
+        "type": "Account",
+        "name": "A/c 8055F7FF0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "805D4C850",
+        "type": "Account",
+        "name": "A/c 805D4C850",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "80605A3E0",
+        "type": "Account",
+        "name": "A/c 80605A3E0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "80636A7A0",
+        "type": "Account",
+        "name": "A/c 80636A7A0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "806482430",
+        "type": "Account",
+        "name": "A/c 806482430",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "8069E9C80",
+        "type": "Account",
+        "name": "A/c 8069E9C80",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "806F416F0",
+        "type": "Account",
+        "name": "A/c 806F416F0",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "808728C10",
+        "type": "Account",
+        "name": "A/c 808728C10",
+        "owner_pan": "SJWHE1520I",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Polaris Mercantile Pvt Ltd"
+      },
+      {
+        "id": "PAN-SJWHE1520I",
+        "type": "PAN",
+        "name": "SJWHE1520I",
+        "owner_pan": null,
+        "director_of": null,
+        "kyc_status": null,
+        "entity_subtype": null,
+        "jurisdiction": null,
+        "linked_company": null
+      }
+    ],
+    "shared_pan_groups": [
+      {
+        "pan": "SJWHE1520I",
+        "accounts": [
+          "800B047D0",
+          "80102A1F0",
+          "801EA1CE0",
+          "80227FC50",
+          "8027CB4E0",
+          "8028DCAE0",
+          "803144A90",
+          "803366440",
+          "8036AE1C0",
+          "8055F7FF0",
+          "805D4C850",
+          "80605A3E0",
+          "80636A7A0",
+          "806482430",
+          "8069E9C80",
+          "806F416F0",
+          "808728C10"
+        ]
+      }
+    ],
+    "alert_details": [
+      {
+        "account": "803366440",
+        "alert_type": "velocity",
+        "detail": "15 outbound transactions within a 48h window totalling 4,257,749"
+      },
+      {
+        "account": "8027CB4E0",
+        "alert_type": "threshold",
+        "detail": "Transfer of 977,236 to 805D4C850 just under the 1,000,000 reporting threshold"
+      },
+      {
+        "account": "80227FC50",
+        "alert_type": "threshold",
+        "detail": "Transfer of 977,698 to 805D4C850 just under the 1,000,000 reporting threshold"
+      }
     ]
   },
   {
-    "case_id": "CASE-004",
-    "risk": { "p": 0.31, "margin": 0.38, "ood": 0.4 },
+    "case_id": "CASE-000001",
+    "risk": {
+      "p": 0.8738,
+      "margin": 0.7477,
+      "ood": 9.0933
+    },
+    "risk_band": "RED",
+    "member_alert_ids": [
+      "VEL-0021",
+      "VEL-0038",
+      "VEL-0101",
+      "VEL-0127",
+      "VEL-0139"
+    ],
+    "accounts": [
+      "800054B70",
+      "800061E50",
+      "8000631E0",
+      "800065CB0",
+      "8000746C0",
+      "8000B4150",
+      "8000EEE80",
+      "8000FC360",
+      "8001253F0",
+      "80012E0B0",
+      "800151C60",
+      "800195070",
+      "8001A6870",
+      "8001B7A10",
+      "8001B8810",
+      "8001B94D0",
+      "8001C97D0",
+      "8001FE5D0",
+      "80021B2C0",
+      "80023BB50",
+      "80023FEE0",
+      "80026DD70",
+      "80026E2C0",
+      "800289800",
+      "800296920",
+      "80029BCF0",
+      "8002AE470",
+      "8011F0870",
+      "8016FDD30"
+    ],
+    "transactions": [
+      {
+        "txn_id": "CASE-000001-TXN-0011463",
+        "from_account": "8000EEE80",
+        "to_account": "8000631E0",
+        "amount": 16403.17,
+        "currency": "Euro",
+        "timestamp": "2022-09-05T13:34:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0068587",
+        "from_account": "800195070",
+        "to_account": "8001B8810",
+        "amount": 13829.37,
+        "currency": "Euro",
+        "timestamp": "2022-09-12T12:05:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0098392",
+        "from_account": "80023FEE0",
+        "to_account": "8001B7A10",
+        "amount": 14905.3,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T12:04:00",
+        "typology_flag": null,
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0016505",
+        "from_account": "8001FE5D0",
+        "to_account": "800054B70",
+        "amount": 18748.97,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-01T06:46:00",
+        "typology_flag": null,
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0047037",
+        "from_account": "8001C97D0",
+        "to_account": "8001B8810",
+        "amount": 15783.57,
+        "currency": "Euro",
+        "timestamp": "2022-09-13T07:17:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0078421",
+        "from_account": "8001B7A10",
+        "to_account": "80023BB50",
+        "amount": 13044.81,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T07:36:00",
+        "typology_flag": null,
+        "xgb_score": 0.9548
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0019772",
+        "from_account": "80029BCF0",
+        "to_account": "8001B7A10",
+        "amount": 13044.81,
+        "currency": "Euro",
+        "timestamp": "2022-09-05T19:19:00",
+        "typology_flag": null,
+        "xgb_score": 0.9546
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0006215",
+        "from_account": "800065CB0",
+        "to_account": "800289800",
+        "amount": 12045.12,
+        "currency": "Euro",
+        "timestamp": "2022-09-05T13:02:00",
+        "typology_flag": null,
+        "xgb_score": 0.9541
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0059193",
+        "from_account": "800296920",
+        "to_account": "8000FC360",
+        "amount": 12030.97,
+        "currency": "Euro",
+        "timestamp": "2022-09-10T14:58:00",
+        "typology_flag": null,
+        "xgb_score": 0.9538
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0036751",
+        "from_account": "80026DD70",
+        "to_account": "800065CB0",
+        "amount": 11349.2,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T11:09:00",
+        "typology_flag": null,
+        "xgb_score": 0.9536
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0095736",
+        "from_account": "80021B2C0",
+        "to_account": "8000FC360",
+        "amount": 9466.64,
+        "currency": "Euro",
+        "timestamp": "2022-09-13T13:26:00",
+        "typology_flag": null,
+        "xgb_score": 0.9531
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0086297",
+        "from_account": "8000EEE80",
+        "to_account": "80026DD70",
+        "amount": 10215.28,
+        "currency": "Euro",
+        "timestamp": "2022-09-04T07:03:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9527
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0064271",
+        "from_account": "8001B94D0",
+        "to_account": "8000FC360",
+        "amount": 8667.21,
+        "currency": "Euro",
+        "timestamp": "2022-09-14T13:19:00",
+        "typology_flag": null,
+        "xgb_score": 0.9527
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0072704",
+        "from_account": "800151C60",
+        "to_account": "8000FC360",
+        "amount": 8392.45,
+        "currency": "Euro",
+        "timestamp": "2022-09-11T11:01:00",
+        "typology_flag": null,
+        "xgb_score": 0.9512
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0046516",
+        "from_account": "8002AE470",
+        "to_account": "8000FC360",
+        "amount": 6894.67,
+        "currency": "Euro",
+        "timestamp": "2022-09-13T12:44:00",
+        "typology_flag": null,
+        "xgb_score": 0.9506
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0019280",
+        "from_account": "80012E0B0",
+        "to_account": "800054B70",
+        "amount": 8369.42,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T08:47:00",
+        "typology_flag": null,
+        "xgb_score": 0.9506
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0073471",
+        "from_account": "800195070",
+        "to_account": "8001253F0",
+        "amount": 7425.99,
+        "currency": "Euro",
+        "timestamp": "2022-09-10T10:17:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9499
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0051500",
+        "from_account": "8011F0870",
+        "to_account": "8016FDD30",
+        "amount": 19847.78,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-03T13:14:00",
+        "typology_flag": null,
+        "xgb_score": 0.9484
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0018065",
+        "from_account": "800061E50",
+        "to_account": "8001A6870",
+        "amount": 13673.72,
+        "currency": "Euro",
+        "timestamp": "2022-09-07T04:17:00",
+        "typology_flag": null,
+        "xgb_score": 0.9414
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0089339",
+        "from_account": "80026E2C0",
+        "to_account": "800054B70",
+        "amount": 15377.16,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-08T02:28:00",
+        "typology_flag": null,
+        "xgb_score": 0.9414
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0033079",
+        "from_account": "8000B4150",
+        "to_account": "800061E50",
+        "amount": 14090.57,
+        "currency": "Euro",
+        "timestamp": "2022-09-07T00:58:00",
+        "typology_flag": null,
+        "xgb_score": 0.9297
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0041113",
+        "from_account": "800289800",
+        "to_account": "80029BCF0",
+        "amount": 12070.25,
+        "currency": "Euro",
+        "timestamp": "2022-09-05T13:53:00",
+        "typology_flag": null,
+        "xgb_score": 0.9275
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0041558",
+        "from_account": "8001A6870",
+        "to_account": "8000FC360",
+        "amount": 7762.42,
+        "currency": "Euro",
+        "timestamp": "2022-09-12T12:37:00",
+        "typology_flag": null,
+        "xgb_score": 0.9222
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0060326",
+        "from_account": "800054B70",
+        "to_account": "8000B4150",
+        "amount": 262128.59,
+        "currency": "Mexican Peso",
+        "timestamp": "2022-09-05T10:43:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9112
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0056325",
+        "from_account": "8001253F0",
+        "to_account": "8000EEE80",
+        "amount": 3199.26,
+        "currency": "US Dollar",
+        "timestamp": "2022-09-06T13:16:00",
+        "typology_flag": null,
+        "xgb_score": 0.9094
+      },
+      {
+        "txn_id": "CASE-000001-TXN-0062811",
+        "from_account": "8000EEE80",
+        "to_account": "8000746C0",
+        "amount": 353923.55,
+        "currency": "Yen",
+        "timestamp": "2022-09-09T06:27:00",
+        "typology_flag": "smurfing",
+        "xgb_score": 0.9064
+      }
+    ],
+    "graph_edges": [
+      {
+        "source": "8000EEE80",
+        "target": "8000631E0",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "800195070",
+        "target": "8001B8810",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "80023FEE0",
+        "target": "8001B7A10",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "8001FE5D0",
+        "target": "800054B70",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "8001C97D0",
+        "target": "8001B8810",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "8001B7A10",
+        "target": "80023BB50",
+        "relation": "SENT",
+        "weight": 0.9548
+      },
+      {
+        "source": "80029BCF0",
+        "target": "8001B7A10",
+        "relation": "SENT",
+        "weight": 0.9546
+      },
+      {
+        "source": "800065CB0",
+        "target": "800289800",
+        "relation": "SENT",
+        "weight": 0.9541
+      },
+      {
+        "source": "800296920",
+        "target": "8000FC360",
+        "relation": "SENT",
+        "weight": 0.9538
+      },
+      {
+        "source": "80026DD70",
+        "target": "800065CB0",
+        "relation": "SENT",
+        "weight": 0.9536
+      },
+      {
+        "source": "80021B2C0",
+        "target": "8000FC360",
+        "relation": "SENT",
+        "weight": 0.9531
+      },
+      {
+        "source": "8000EEE80",
+        "target": "80026DD70",
+        "relation": "SENT",
+        "weight": 0.9527
+      },
+      {
+        "source": "8001B94D0",
+        "target": "8000FC360",
+        "relation": "SENT",
+        "weight": 0.9527
+      },
+      {
+        "source": "800151C60",
+        "target": "8000FC360",
+        "relation": "SENT",
+        "weight": 0.9512
+      },
+      {
+        "source": "8002AE470",
+        "target": "8000FC360",
+        "relation": "SENT",
+        "weight": 0.9506
+      },
+      {
+        "source": "80012E0B0",
+        "target": "800054B70",
+        "relation": "SENT",
+        "weight": 0.9506
+      },
+      {
+        "source": "800195070",
+        "target": "8001253F0",
+        "relation": "SENT",
+        "weight": 0.9499
+      },
+      {
+        "source": "8011F0870",
+        "target": "8016FDD30",
+        "relation": "SENT",
+        "weight": 0.9484
+      },
+      {
+        "source": "800061E50",
+        "target": "8001A6870",
+        "relation": "SENT",
+        "weight": 0.9414
+      },
+      {
+        "source": "80026E2C0",
+        "target": "800054B70",
+        "relation": "SENT",
+        "weight": 0.9414
+      },
+      {
+        "source": "8000B4150",
+        "target": "800061E50",
+        "relation": "SENT",
+        "weight": 0.9297
+      },
+      {
+        "source": "800289800",
+        "target": "80029BCF0",
+        "relation": "SENT",
+        "weight": 0.9275
+      },
+      {
+        "source": "8001A6870",
+        "target": "8000FC360",
+        "relation": "SENT",
+        "weight": 0.9222
+      },
+      {
+        "source": "800054B70",
+        "target": "8000B4150",
+        "relation": "SENT",
+        "weight": 0.9112
+      },
+      {
+        "source": "8001253F0",
+        "target": "8000EEE80",
+        "relation": "SENT",
+        "weight": 0.9094
+      },
+      {
+        "source": "8000EEE80",
+        "target": "8000746C0",
+        "relation": "SENT",
+        "weight": 0.9064
+      },
+      {
+        "source": "800054B70",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800061E50",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8000631E0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800065CB0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8000746C0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8000B4150",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8000EEE80",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8000FC360",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001253F0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80012E0B0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800151C60",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800195070",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001A6870",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001B7A10",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001B8810",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001B94D0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001C97D0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8001FE5D0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80021B2C0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80023BB50",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80023FEE0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80026DD70",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80026E2C0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800289800",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "800296920",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "80029BCF0",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      },
+      {
+        "source": "8002AE470",
+        "target": "PAN-IZGWC0456E",
+        "relation": "LINKED_PAN",
+        "weight": 1.0
+      }
+    ],
+    "entities": [
+      {
+        "id": "800054B70",
+        "type": "Account",
+        "name": "A/c 800054B70",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800061E50",
+        "type": "Account",
+        "name": "A/c 800061E50",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8000631E0",
+        "type": "Account",
+        "name": "A/c 8000631E0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800065CB0",
+        "type": "Account",
+        "name": "A/c 800065CB0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8000746C0",
+        "type": "Account",
+        "name": "A/c 8000746C0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8000B4150",
+        "type": "Account",
+        "name": "A/c 8000B4150",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8000EEE80",
+        "type": "Account",
+        "name": "A/c 8000EEE80",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8000FC360",
+        "type": "Account",
+        "name": "A/c 8000FC360",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001253F0",
+        "type": "Account",
+        "name": "A/c 8001253F0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80012E0B0",
+        "type": "Account",
+        "name": "A/c 80012E0B0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800151C60",
+        "type": "Account",
+        "name": "A/c 800151C60",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800195070",
+        "type": "Account",
+        "name": "A/c 800195070",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001A6870",
+        "type": "Account",
+        "name": "A/c 8001A6870",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001B7A10",
+        "type": "Account",
+        "name": "A/c 8001B7A10",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001B8810",
+        "type": "Account",
+        "name": "A/c 8001B8810",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001B94D0",
+        "type": "Account",
+        "name": "A/c 8001B94D0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001C97D0",
+        "type": "Account",
+        "name": "A/c 8001C97D0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8001FE5D0",
+        "type": "Account",
+        "name": "A/c 8001FE5D0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80021B2C0",
+        "type": "Account",
+        "name": "A/c 80021B2C0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80023BB50",
+        "type": "Account",
+        "name": "A/c 80023BB50",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80023FEE0",
+        "type": "Account",
+        "name": "A/c 80023FEE0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80026DD70",
+        "type": "Account",
+        "name": "A/c 80026DD70",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80026E2C0",
+        "type": "Account",
+        "name": "A/c 80026E2C0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800289800",
+        "type": "Account",
+        "name": "A/c 800289800",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "800296920",
+        "type": "Account",
+        "name": "A/c 800296920",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "80029BCF0",
+        "type": "Account",
+        "name": "A/c 80029BCF0",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "PENDING",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8002AE470",
+        "type": "Account",
+        "name": "A/c 8002AE470",
+        "owner_pan": "IZGWC0456E",
+        "director_of": null,
+        "kyc_status": "FAILED",
+        "entity_subtype": "Shell Company",
+        "jurisdiction": "High Risk",
+        "linked_company": "Vertex Global Trading Pvt Ltd"
+      },
+      {
+        "id": "8011F0870",
+        "type": "Account",
+        "name": "A/c 8011F0870",
+        "owner_pan": "PSUNE2277S",
+        "director_of": null,
+        "kyc_status": "VERIFIED",
+        "entity_subtype": "Individual",
+        "jurisdiction": "Standard",
+        "linked_company": null
+      },
+      {
+        "id": "8016FDD30",
+        "type": "Account",
+        "name": "A/c 8016FDD30",
+        "owner_pan": "OUSJT3436S",
+        "director_of": null,
+        "kyc_status": "VERIFIED",
+        "entity_subtype": "Individual",
+        "jurisdiction": "Standard",
+        "linked_company": null
+      },
+      {
+        "id": "PAN-IZGWC0456E",
+        "type": "PAN",
+        "name": "IZGWC0456E",
+        "owner_pan": null,
+        "director_of": null,
+        "kyc_status": null,
+        "entity_subtype": null,
+        "jurisdiction": null,
+        "linked_company": null
+      }
+    ],
+    "shared_pan_groups": [
+      {
+        "pan": "IZGWC0456E",
+        "accounts": [
+          "800054B70",
+          "800061E50",
+          "8000631E0",
+          "800065CB0",
+          "8000746C0",
+          "8000B4150",
+          "8000EEE80",
+          "8000FC360",
+          "8001253F0",
+          "80012E0B0",
+          "800151C60",
+          "800195070",
+          "8001A6870",
+          "8001B7A10",
+          "8001B8810",
+          "8001B94D0",
+          "8001C97D0",
+          "8001FE5D0",
+          "80021B2C0",
+          "80023BB50",
+          "80023FEE0",
+          "80026DD70",
+          "80026E2C0",
+          "800289800",
+          "800296920",
+          "80029BCF0",
+          "8002AE470"
+        ]
+      }
+    ],
+    "alert_details": [
+      {
+        "account": "800054B70",
+        "alert_type": "velocity",
+        "detail": "8 outbound transactions within a 48h window totalling 3,334,759"
+      },
+      {
+        "account": "8000631E0",
+        "alert_type": "velocity",
+        "detail": "6 outbound transactions within a 48h window totalling 119,886"
+      },
+      {
+        "account": "8000EEE80",
+        "alert_type": "velocity",
+        "detail": "6 outbound transactions within a 48h window totalling 408,249"
+      },
+      {
+        "account": "800195070",
+        "alert_type": "velocity",
+        "detail": "8 outbound transactions within a 48h window totalling 68,092"
+      },
+      {
+        "account": "8001C97D0",
+        "alert_type": "velocity",
+        "detail": "11 outbound transactions within a 48h window totalling 92,505"
+      }
+    ]
+  },
+  {
+    "case_id": "CASE-000391",
+    "risk": {
+      "p": 0.3997,
+      "margin": 0.2006,
+      "ood": 5.8802
+    },
     "risk_band": "GREEN",
-    "member_alert_ids": ["ALR-4501"],
-    "accounts": ["ACC-5001", "ACC-5002"],
+    "member_alert_ids": [],
+    "accounts": [
+      "800911F90",
+      "800914F40",
+      "800915E40"
+    ],
     "transactions": [
-      { "txn_id": "TXN-93001", "from_account": "ACC-5001", "to_account": "ACC-5002", "amount": 120000, "currency": "INR", "timestamp": "2026-06-20T12:00:00", "typology_flag": null },
-      { "txn_id": "TXN-93002", "from_account": "ACC-5001", "to_account": "ACC-5002", "amount": 85000, "currency": "INR", "timestamp": "2026-06-27T12:30:00", "typology_flag": null }
+      {
+        "txn_id": "CASE-000391-TXN-0017289",
+        "from_account": "800914F40",
+        "to_account": "800911F90",
+        "amount": 3855.23,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T21:57:00",
+        "typology_flag": null,
+        "xgb_score": 0.9026
+      },
+      {
+        "txn_id": "CASE-000391-TXN-0073438",
+        "from_account": "800915E40",
+        "to_account": "800911F90",
+        "amount": 567.5,
+        "currency": "Euro",
+        "timestamp": "2022-09-06T21:43:00",
+        "typology_flag": null,
+        "xgb_score": 0.7439
+      }
     ],
     "graph_edges": [
-      { "source": "ACC-5001", "target": "ACC-5002", "relation": "SENT", "weight": 2 }
+      {
+        "source": "800914F40",
+        "target": "800911F90",
+        "relation": "SENT",
+        "weight": 0.9026
+      },
+      {
+        "source": "800915E40",
+        "target": "800911F90",
+        "relation": "SENT",
+        "weight": 0.7439
+      }
     ],
     "entities": [
-      { "id": "ACC-5001", "type": "Account", "name": "SB A/c ...95001", "owner_pan": "JLMPT9921E", "director_of": null },
-      { "id": "ACC-5002", "type": "Account", "name": "SB A/c ...95002", "owner_pan": "KNRPS3364F", "director_of": null }
-    ]
+      {
+        "id": "800911F90",
+        "type": "Account",
+        "name": "A/c 800911F90",
+        "owner_pan": "ZQEMJ9903O",
+        "director_of": null,
+        "kyc_status": "VERIFIED",
+        "entity_subtype": "Registered Business",
+        "jurisdiction": "Standard",
+        "linked_company": null
+      },
+      {
+        "id": "800914F40",
+        "type": "Account",
+        "name": "A/c 800914F40",
+        "owner_pan": "XLOGJ9625U",
+        "director_of": null,
+        "kyc_status": "VERIFIED",
+        "entity_subtype": "Individual",
+        "jurisdiction": "Standard",
+        "linked_company": null
+      },
+      {
+        "id": "800915E40",
+        "type": "Account",
+        "name": "A/c 800915E40",
+        "owner_pan": "LHPNI7280Q",
+        "director_of": null,
+        "kyc_status": "VERIFIED",
+        "entity_subtype": "Registered Business",
+        "jurisdiction": "Standard",
+        "linked_company": null
+      }
+    ],
+    "shared_pan_groups": [],
+    "alert_details": []
   }
 ]

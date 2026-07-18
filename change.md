@@ -139,7 +139,46 @@ as the day-0 baseline. The extension lives as an explicit copy-paste diff in the
 interface doc (§3, §10) so Person 1 applies the identical block; both copies are
 then updated together at merge, exactly as SPEC card 3 prescribes.
 
-## 11. Risk-band thresholds
+## 11. Integration with Person 1's engine (merge of `origin/main`)
+
+Merged `origin/main` ("Complete Batch Layer Push") into `dynamic-plane` and ran
+the full integration guide. Results:
+
+- **Contract**: root `shared_contracts.py` copied verbatim into `reasoning/`
+  (differences vs. my copy were comments only — fields identical). All 5
+  `engine/fixtures/hero_cases.json` cases `Case.model_validate()` clean; zero
+  dangling graph edges; every txn account has an entity, as the guide promised.
+- **Fixtures swapped**: `reasoning/fixtures/mock_cases.json` is now the engine's
+  hero set (4 RED + 1 GREEN). The old hand-made SAML-D-style fixtures are gone;
+  the GREEN case CASE-000391 (2 txns, no relationships) correctly trips the
+  INSUFFICIENT_EVIDENCE hard gate, replacing my CASE-004 as the gate demo.
+- **Currency handling generalised** (the one real incompatibility): engine emits
+  IBM-AML full-name currencies ("Euro", "US Dollar", "Rupee"). Fixed
+  `format_amount()` backend+frontend (₹ keeps Indian grouping; €/$/£ western;
+  unknown names pass through), and widened the grounding amount extractor to
+  symbol-prefixed, comma-grouped, and bare ≥5-digit figures — verified none of
+  "score 0.94" / "48 hours" / "2026" false-match.
+- **Grounding fixes found by integration testing**: (1) my evidence lines
+  truncated decimal amounts (`.0f`), so the model faithfully cited a figure that
+  then failed verification — evidence now shows the exact amount; (2)
+  integer-rounded citations of decimal ledger amounts and figures quoted in
+  engine `alert_details` are accepted as grounded; (3) parser crash on a lone
+  "€," fixed. Result: CASE-000006 went from 80 false amount-violations to 0.
+- **Verified live on real engine cases** (gemma4-sentinel, 16k ctx — raised from
+  8k because real cases carry ~4.3k-token evidence prompts; fine on GPU for the
+  4B): CASE-000006 → STRUCTURING (61-74s), CASE-000002 → LAYERING (71s), bands
+  genuinely varied, XML export + audit chain intact.
+- **Wire-swap proven**: reasoning ran with `ENGINE_API_URL=http://localhost:8001`
+  against an engine-shaped server serving the hero fixtures — cases proxied,
+  evidence built over the wire, live investigation OK. The real engine seed
+  needs the IBM AML CSV (`engine/data/saml_d.csv`, gitignored, Kaggle download)
+  which isn't on this machine — final live-engine run happens wherever that
+  dataset lives; nothing on the reasoning side changes.
+- KYC evidence is now **grouped** ("N accounts share FAILED KYC + shell company
+  X: …") instead of one line per account — real cases have 30+ ring accounts and
+  the aggregate is stronger evidence in fewer tokens.
+
+## 12. Risk-band thresholds
 
 Implemented as assumed in the spec (RED ≥ 0.7, YELLOW ≥ 0.4) with the dashboard
 threshold slider recomputing bands via `GET /cases?threshold=` on the fixture

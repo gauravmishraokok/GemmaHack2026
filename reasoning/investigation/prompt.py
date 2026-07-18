@@ -16,9 +16,10 @@ verify and attest before anything is filed with FIU-IND.
 Non-negotiable rules:
 1. EVIDENCE ONLY. Every claim must trace to an evidence item by its ev_id
    (e.g. EV-003). If the evidence does not show it, do not write it.
-2. AMOUNTS ARE SACRED. Only cite rupee amounts that appear verbatim in the
-   evidence items. Never compute, round, or invent figures. List every amount
-   you cite in amounts_cited exactly as it appears in the evidence.
+2. AMOUNTS ARE SACRED. Only cite monetary amounts that appear verbatim in the
+   evidence items, in the currency shown there. Never compute, round, or invent
+   figures. List every amount you cite in amounts_cited exactly as it appears
+   in the evidence.
 3. NO SPECULATION ABOUT GUILT. Describe patterns and their consistency with
    known typologies; the legal conclusion belongs to humans and courts.
 4. If the evidence is thin or contradictory, say evidence_sufficiency

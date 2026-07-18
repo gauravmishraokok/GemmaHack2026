@@ -8,7 +8,7 @@ import {
   Tooltip,
   Cell,
 } from "recharts";
-import { formatINR } from "../../api/client.js";
+import { formatAmount } from "../../api/client.js";
 import { SectionTitle, SourceBadge } from "../ui.jsx";
 
 export default function Timeline({ caseObj, pack }) {
@@ -46,7 +46,9 @@ export default function Timeline({ caseObj, pack }) {
               tick={{ fill: "var(--ink-muted)", fontSize: 10 }}
               tickLine={false}
               axisLine={false}
-              tickFormatter={(v) => (v >= 100000 ? `${(v / 100000).toFixed(1)}L` : v)}
+              tickFormatter={(v) =>
+                Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(v)
+              }
               width={44}
             />
             <Tooltip
@@ -59,7 +61,7 @@ export default function Timeline({ caseObj, pack }) {
               }}
               labelStyle={{ color: "var(--ink-2)" }}
               formatter={(v, _n, entry) => [
-                `${formatINR(v)} — ${entry.payload.from_account} → ${entry.payload.to_account}`,
+                `${formatAmount(v, entry.payload.currency)} — ${entry.payload.from_account} → ${entry.payload.to_account}`,
                 entry.payload.txn_id,
               ]}
             />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { api, formatINR, CONF_STYLE } from "../../api/client.js";
+import { api, formatAmount, CONF_STYLE } from "../../api/client.js";
 import { SectionTitle, AIBadge, Chip, Spinner, ErrorBox } from "../ui.jsx";
 
 function ConfidenceMeter({ value }) {
@@ -170,7 +170,7 @@ export default function STRHeatmap({ full, caseId, onRun, busy }) {
           <div className="flex flex-wrap gap-2">
             {draft.amounts_cited.map((a, i) => (
               <code key={i} className="tabular rounded border border-[var(--border)] bg-[var(--page)] px-2 py-1 text-xs">
-                {formatINR(a)}
+                {formatAmount(a)}
               </code>
             ))}
           </div>

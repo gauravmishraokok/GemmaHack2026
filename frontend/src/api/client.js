@@ -40,8 +40,23 @@ export const api = {
   auditVerify: () => req("/audit/verify"),
 };
 
-export function formatINR(amount) {
-  return "₹" + Number(amount).toLocaleString("en-IN", { maximumFractionDigits: 0 });
+// Engine currencies are IBM-AML full names ("US Dollar", "Euro", "Rupee"),
+// not ISO codes — map to symbols, fall back to the raw name.
+const CURRENCY_SYMBOLS = {
+  inr: "₹", rupee: "₹", "indian rupee": "₹",
+  usd: "$", "us dollar": "$",
+  eur: "€", euro: "€",
+  gbp: "£", "uk pound": "£", pound: "£",
+  yen: "¥", jpy: "¥",
+};
+
+export function formatAmount(amount, currency = "") {
+  const sym = CURRENCY_SYMBOLS[(currency || "").trim().toLowerCase()];
+  if (sym === "₹")
+    return "₹" + Number(amount).toLocaleString("en-IN", { maximumFractionDigits: 0 });
+  const grouped = Number(amount).toLocaleString("en-US", { maximumFractionDigits: 0 });
+  if (sym) return sym + grouped;
+  return currency ? `${grouped} ${currency}` : grouped;
 }
 
 export const BAND_STYLE = {

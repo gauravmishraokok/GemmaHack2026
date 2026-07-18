@@ -26,6 +26,28 @@ def _fmt_inr(amount: float) -> str:
     return f"₹{grouped}"
 
 
+# Engine emits IBM-AML full-name currencies ("US Dollar", "Euro", "Rupee"),
+# not ISO codes — see integration guide §3.1.
+_CURRENCY_SYMBOLS = {
+    "inr": "₹", "rupee": "₹", "indian rupee": "₹",
+    "usd": "$", "us dollar": "$",
+    "eur": "€", "euro": "€",
+    "gbp": "£", "uk pound": "£", "pound": "£",
+    "yen": "¥", "jpy": "¥",
+}
+
+
+def format_amount(amount: float, currency: str = "INR") -> str:
+    """Currency-aware formatting. Rupees keep Indian grouping; everything else
+    gets western grouping with its symbol, unknown currencies keep their name."""
+    key = (currency or "INR").strip().lower()
+    sym = _CURRENCY_SYMBOLS.get(key)
+    if sym == "₹":
+        return _fmt_inr(amount)
+    grouped = f"{int(round(amount)):,}"
+    return f"{sym}{grouped}" if sym else f"{grouped} {currency}"
+
+
 def build_timeline(case: Case) -> List[TimelineEvent]:
     txns = sorted(case.transactions, key=lambda t: t.timestamp)
     events: List[TimelineEvent] = []
@@ -34,7 +56,7 @@ def build_timeline(case: Case) -> List[TimelineEvent]:
         events.append(
             TimelineEvent(
                 ts=t.timestamp,
-                event=f"{t.txn_id}: {t.from_account} sent {_fmt_inr(t.amount)} to {t.to_account}{flag}",
+                event=f"{t.txn_id}: {t.from_account} sent {format_amount(t.amount, t.currency)} to {t.to_account}{flag}",
             )
         )
 
@@ -50,7 +72,7 @@ def build_timeline(case: Case) -> List[TimelineEvent]:
                 events.append(
                     TimelineEvent(
                         ts=window[-1].timestamp,
-                        event=f"VELOCITY: {sender} moved {_fmt_inr(total)} across "
+                        event=f"VELOCITY: {sender} moved {format_amount(total, window[0].currency)} across "
                         f"{len(window)} transactions within 48h",
                     )
                 )

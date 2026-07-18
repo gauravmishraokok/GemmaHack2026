@@ -19,10 +19,11 @@ OLLAMA_BASE_MODEL = os.getenv("OLLAMA_BASE_MODEL", "gemma4:latest")
 # reasoning-channel thinking + constrained answer, so at startup the service
 # derives OLLAMA_MODEL from the base with num_ctx baked in (shares weights,
 # no extra disk). Set OLLAMA_MODEL to an existing tag to skip provisioning.
-# 8192 balances headroom against GPU offload: a 16k KV cache pushed ~35% of
-# the 12B onto CPU on the dev box and roughly doubled generation time.
+# 16k fits fully on GPU for the 4B base (small KV cache) and covers the real
+# engine hero cases (~4.3k-token evidence prompts + reasoning + answer). If you
+# switch OLLAMA_BASE_MODEL to the 12B, drop this to 8192 or expect CPU offload.
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4-sentinel")
-NUM_CTX = int(os.getenv("NUM_CTX", "8192"))
+NUM_CTX = int(os.getenv("NUM_CTX", "16384"))
 # Local embedding model for regulation semantic search (already in ollama list).
 EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")
 # Generation budget. The 12B build emits reasoning-channel tokens before the

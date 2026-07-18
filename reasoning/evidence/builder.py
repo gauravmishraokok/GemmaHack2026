@@ -10,7 +10,7 @@ from __future__ import annotations
 from typing import List
 
 from shared_contracts import Case, EvidenceItem, EvidencePack
-from evidence.timeline import build_timeline, _fmt_inr
+from evidence.timeline import build_timeline, format_amount
 from evidence.relationships import extract_relationships
 from evidence.documents import documents_for_accounts
 from evidence.regulations import RegulationStore
@@ -40,11 +40,14 @@ def build_evidence_pack(case: Case, reg_store: RegulationStore) -> EvidencePack:
     for t in sorted(case.transactions, key=lambda x: x.timestamp):
         flag = f", flagged {t.typology_flag}" if t.typology_flag else ""
         xgb = f", XGBoost anomaly score {t.xgb_score:.2f}" if t.xgb_score is not None else ""
+        # exact figure, never truncated — the model copies this verbatim and the
+        # grounding verifier checks it back against the ledger
+        exact = f"{t.amount:.2f}".rstrip("0").rstrip(".")
         add(
             "transaction",
             t.txn_id,
-            f"{t.from_account} -> {t.to_account} {_fmt_inr(t.amount)} "
-            f"({t.amount:.0f} {t.currency}) on {t.timestamp.isoformat()}{flag}{xgb}",
+            f"{t.from_account} -> {t.to_account} {format_amount(t.amount, t.currency)} "
+            f"(exact: {exact} {t.currency}) on {t.timestamp.isoformat()}{flag}{xgb}",
         )
 
     # 2. relationships
@@ -60,7 +63,12 @@ def build_evidence_pack(case: Case, reg_store: RegulationStore) -> EvidencePack:
     for i, a in enumerate(case.alert_details):
         add("rule_alert", f"alert:{a.alert_type}:{a.account}", f"{a.alert_type} rule on {a.account}: {a.detail}")
 
-    # 2c. KYC risk indicators — FAILED KYC / shell entities are directly citable
+    # 2c. KYC risk indicators — FAILED KYC / shell entities are directly citable.
+    # Grouped by identical indicator set: real engine cases can carry 30+ ring
+    # accounts with the same flags, and one aggregate line ("12 accounts share
+    # FAILED KYC + shell company X") is both cheaper in tokens and stronger
+    # evidence than 30 repeats.
+    kyc_groups: dict = {}
     for ent in case.entities:
         indicators = []
         if ent.kyc_status and ent.kyc_status != "VERIFIED":
@@ -70,7 +78,19 @@ def build_evidence_pack(case: Case, reg_store: RegulationStore) -> EvidencePack:
         if ent.jurisdiction and ent.jurisdiction != "Standard":
             indicators.append(f"{ent.jurisdiction} jurisdiction")
         if indicators:
-            add("kyc_flag", f"kyc:{ent.id}", f"{ent.id} ({ent.name or ent.type}): {', '.join(indicators)}")
+            key = (", ".join(indicators), ent.linked_company or "")
+            kyc_groups.setdefault(key, []).append(ent.id)
+    for (indicators, company), ids in kyc_groups.items():
+        company_note = f", all linked to {company}" if company else ""
+        if len(ids) == 1:
+            add("kyc_flag", f"kyc:{ids[0]}", f"{ids[0]}: {indicators}{company_note}")
+        else:
+            shown = ", ".join(ids[:8]) + (f" (+{len(ids) - 8} more)" if len(ids) > 8 else "")
+            add(
+                "kyc_flag",
+                f"kyc:{'|'.join(ids)}",
+                f"{len(ids)} accounts share the same risk profile — {indicators}{company_note}: {shown}",
+            )
 
     # 3. documents (stubbed vision extraction)
     for d in documents_for_accounts(case.accounts):
