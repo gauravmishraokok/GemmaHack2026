@@ -1,16 +1,81 @@
-# python
+# ── Python bytecode / cache ─────────────────────────────────────────────
 __pycache__/
-*.pyc
-.venv/
+*.py[cod]
+*$py.class
+*.so
 
-# reasoning service runtime artifacts
+# ── Virtual environments ────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Packaging / build ────────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ── pandas / numpy / ML artifacts ───────────────────────────────────────
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.parquet
+*.feather
+
+# ── Datasets (large, download separately) ───────────────────────────────
+engine/data/*.csv
+engine/data/probe_cache/
+engine/data/engine.db
+engine/data/xgb_model.pkl
+engine/data/xgb_adapted.json
+
+# keep the small pretrained Kaggle export + its metadata
+!engine/data/xgb_pretrained.json
+!engine/data/xgb_pretrained_meta.json
+
+# ── SQLite ───────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Jupyter ──────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Pytest / coverage / type-checkers ───────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── HuggingFace / torch caches (if ever created inside the repo) ────────
+.cache/
+*.bin
+*.safetensors
+
+# ── Reasoning service runtime artifacts (Person 2) ──────────────────────
 reasoning/.cache/
 reasoning/.audit/
 reasoning/.exports/
 
-# frontend
+# ── Frontend ─────────────────────────────────────────────────────────────
 frontend/node_modules/
 frontend/dist/
+frontend/.vite/
 
-# env
+# ── Env ──────────────────────────────────────────────────────────────────
 .env
+
+# ── OS / editor cruft ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# ── Logs / temp ──────────────────────────────────────────────────────────
+*.log
+*.tmp

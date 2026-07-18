@@ -1,0 +1,36 @@
+{
+  "p75": 12297.84,
+  "p95": 623757.22,
+  "eval_report": {
+    "level": "transaction",
+    "dataset": "HI-Small_Trans.csv",
+    "test_n": 1015669,
+    "test_pos": 1035,
+    "auprc": 0.046,
+    "auroc": 0.934,
+    "precision_1": 0.011,
+    "recall_1": 0.8773,
+    "f1_1": 0.0218,
+    "model": "xgboost",
+    "best_iteration": 70
+  },
+  "feature_names": [
+    "log_amount",
+    "hour",
+    "is_night",
+    "is_unsocial_hour",
+    "currency_mismatch",
+    "pay_currency_id",
+    "rcv_currency_id",
+    "payment_type_id",
+    "cross_institution",
+    "is_swift",
+    "is_cash",
+    "near_5l",
+    "near_10l",
+    "near_25l",
+    "above_p75",
+    "above_p95",
+    "log_amount_sq"
+  ]
+}
