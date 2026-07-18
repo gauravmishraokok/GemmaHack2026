@@ -1,0 +1,20 @@
+{
+  "_note": "STUB — synthetic document-extraction fixtures. Simulates the output of a Gemma-vision OCR/extraction pass over scanned KYC forms and invoices, per SPEC card 2 phase B ('simulated for demo speed'). All identities are synthetic.",
+  "ACC-1001": [
+    { "doc_id": "DOC-KYC-1001", "doc_type": "KYC Form", "field": "Declared occupation", "value": "Textile retail proprietor", "extracted_by": "gemma-vision (stubbed)" },
+    { "doc_id": "DOC-KYC-1001", "doc_type": "KYC Form", "field": "Declared annual income", "value": "INR 8,50,000", "extracted_by": "gemma-vision (stubbed)" }
+  ],
+  "ACC-1002": [
+    { "doc_id": "DOC-KYC-1002", "doc_type": "KYC Form", "field": "Declared occupation", "value": "Textile retail proprietor (same PAN as ACC-1001)", "extracted_by": "gemma-vision (stubbed)" }
+  ],
+  "ACC-3002": [
+    { "doc_id": "DOC-INV-3002", "doc_type": "Invoice", "field": "Invoice INV/ME/2026/114 amount", "value": "INR 24,00,000 — 'export consultancy services', no shipping bill reference", "extracted_by": "gemma-vision (stubbed)" }
+  ],
+  "ACC-3003": [
+    { "doc_id": "DOC-GST-3003", "doc_type": "GST Registration", "field": "GSTIN status", "value": "29AAECK9034J1Z5 — registered 2026-04-11, nil returns filed", "extracted_by": "gemma-vision (stubbed)" }
+  ],
+  "ACC-4500": [
+    { "doc_id": "DOC-KYC-4500", "doc_type": "KYC Form", "field": "Declared occupation", "value": "Homemaker", "extracted_by": "gemma-vision (stubbed)" },
+    { "doc_id": "DOC-KYC-4500", "doc_type": "KYC Form", "field": "Declared annual income", "value": "INR 2,40,000", "extracted_by": "gemma-vision (stubbed)" }
+  ]
+}

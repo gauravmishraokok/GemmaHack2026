@@ -95,14 +95,14 @@ Python (`fastapi`, `pandas`, `networkx`, `transformers`, `scikit-learn`, `xgboos
 # 1. Engine (port 8001)
 cd engine && uvicorn api.main:app --port 8001 --reload
 
-# 2. Reasoning (port 8002) — needs GEMMA_MODEL_PATH set to your GGUF file
+# 2. Reasoning (port 8002) — needs Ollama running with gemma4:12b + nomic-embed-text pulled
 cd reasoning && uvicorn api.main:app --port 8002 --reload
 
 # 3. Frontend
 cd frontend && npm install && npm run dev
 ```
 
-Set `ENGINE_API_URL=http://localhost:8001` and `REASONING_API_URL=http://localhost:8002` in `frontend/.env`.
+Frontend reads `VITE_REASONING_URL` (default `http://localhost:8002`). On integration day set `ENGINE_API_URL=http://localhost:8001` for the reasoning service — it proxies cases from the engine and nothing else changes (see `change.md` for Person 2's implementation notes and deviations).
 
 ## Dataset
 

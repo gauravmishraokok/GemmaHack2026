@@ -1,0 +1,16 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# reasoning service runtime artifacts
+reasoning/.cache/
+reasoning/.audit/
+reasoning/.exports/
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+
+# env
+.env

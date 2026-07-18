@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Palette roles (dark analyst surface — values from the validated reference
+   palette; status colors are fixed and never reused as series colors). */
+:root {
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #222220;
+  --border: rgba(255, 255, 255, 0.1);
+  --grid: #2c2c2a;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --ink-muted: #898781;
+
+  /* status (fixed) */
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+
+  /* categorical, dark-surface steps: Account / Person / Company / PAN */
+  --cat-account: #3987e5;
+  --cat-person: #199e70;
+  --cat-company: #9085e9;
+  --cat-pan: #d95926;
+}
+
+html,
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--grid);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "section": "PMLA 2002, Section 3",
+    "title": "Offence of money-laundering",
+    "text": "Whosoever directly or indirectly attempts to indulge or knowingly assists or knowingly is a party or is actually involved in any process or activity connected with the proceeds of crime including its concealment, possession, acquisition or use and projecting or claiming it as untainted property shall be guilty of offence of money-laundering.",
+    "tags": ["money laundering", "proceeds of crime", "concealment", "layering", "general"]
+  },
+  {
+    "section": "PMLA 2002, Section 12(1)(b)",
+    "title": "Reporting entity obligations",
+    "text": "Every reporting entity shall furnish to the Director FIU-IND information relating to such transactions, whether attempted or executed, the nature and value of which may be prescribed. This includes suspicious transaction reports irrespective of the amount involved.",
+    "tags": ["reporting obligation", "STR", "FIU-IND", "suspicious transaction"]
+  },
+  {
+    "section": "PML Rules 2005, Rule 2(1)(g)",
+    "title": "Suspicious transaction definition",
+    "text": "'Suspicious transaction' means a transaction, whether or not made in cash, which to a person acting in good faith gives rise to a reasonable ground of suspicion that it may involve proceeds of crime; or appears to be made in circumstances of unusual or unjustified complexity; or appears to have no economic rationale or bona fide purpose.",
+    "tags": ["suspicious transaction", "ground of suspicion", "no economic rationale", "unusual complexity", "circular", "round tripping", "layering"]
+  },
+  {
+    "section": "PML Rules 2005, Rule 3(1)(B)",
+    "title": "Integrally connected cash transactions",
+    "text": "Reporting entities shall maintain records of all series of cash transactions integrally connected to each other which have been individually valued below rupees ten lakh where such series of transactions have taken place within a month and the monthly aggregate exceeds rupees ten lakh. Splitting amounts to remain below the threshold is the classic indicator of structuring.",
+    "tags": ["structuring", "threshold", "ten lakh", "series of transactions", "integrally connected", "smurfing", "cash"]
+  },
+  {
+    "section": "PML Rules 2005, Rule 8(2)",
+    "title": "STR furnishing timeline",
+    "text": "The Principal Officer of a reporting entity shall furnish the suspicious transaction report to the Director FIU-IND not later than seven working days on being satisfied that the transaction is suspicious.",
+    "tags": ["STR", "seven working days", "principal officer", "filing", "timeline"]
+  },
+  {
+    "section": "RBI KYC Master Direction 2016, Para 38",
+    "title": "Ongoing due diligence",
+    "text": "Regulated entities shall undertake ongoing due diligence of customers to ensure that their transactions are consistent with their knowledge about the customers, customers' business and risk profile and the source of funds. Special attention shall be paid to all complex, unusually large transactions and all unusual patterns which have no apparent economic or visible lawful purpose.",
+    "tags": ["ongoing due diligence", "customer profile", "inconsistent", "unusual pattern", "source of funds", "velocity", "sudden activity"]
+  },
+  {
+    "section": "RBI KYC Master Direction 2016, Para 39",
+    "title": "Multiple accounts and identity linkage",
+    "text": "Regulated entities shall apply enhanced monitoring where a single customer identifier such as a PAN is linked to multiple accounts exhibiting coordinated activity, or where accounts of different legal entities are controlled by common directors or beneficial owners, since such linkage may be used to disguise the aggregate scale or origin of funds.",
+    "tags": ["linked PAN", "multiple accounts", "common director", "beneficial owner", "shell company", "shared director", "coordinated"]
+  },
+  {
+    "section": "FIU-IND STR Guidance, Red Flag 4.2",
+    "title": "Transactions just below reporting thresholds",
+    "text": "Multiple transactions individually kept marginally below the prescribed reporting threshold, executed within a short period between the same or connected parties, are a primary red flag indicator of structuring designed to avoid the reporting requirement.",
+    "tags": ["structuring", "below threshold", "red flag", "short period", "same parties", "repeat beneficiary"]
+  },
+  {
+    "section": "FIU-IND STR Guidance, Red Flag 5.7",
+    "title": "Funnel accounts and dispersed inflows",
+    "text": "An account receiving numerous small credits from many unrelated remitters, followed by rapid aggregation or onward transfer, indicates use of the account as a funnel or collection point (smurfing). The dispersion of senders is intended to keep each credit unremarkable in isolation.",
+    "tags": ["smurfing", "funnel account", "many senders", "small credits", "aggregation", "collection"]
+  },
+  {
+    "section": "FIU-IND STR Guidance, Red Flag 6.3",
+    "title": "Circular movement of funds",
+    "text": "Funds moving through a chain of accounts or entities and returning to the originator, with small attritional differences at each hop and no commensurate trade or service, indicate layering through round-tripping. Common directorship or ownership across the intermediate entities strengthens the inference of a single controlling mind.",
+    "tags": ["round tripping", "circular flow", "layering", "chain of accounts", "common director", "shell entities"]
+  }
+]

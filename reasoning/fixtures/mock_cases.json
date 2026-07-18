@@ -1,0 +1,123 @@
+[
+  {
+    "case_id": "CASE-001",
+    "risk": { "p": 0.91, "margin": 0.82, "ood": 1.4 },
+    "risk_band": "RED",
+    "member_alert_ids": ["ALR-1201", "ALR-1202", "ALR-1207", "ALR-1211", "ALR-1214", "ALR-1219"],
+    "accounts": ["ACC-1001", "ACC-1002", "ACC-2044"],
+    "transactions": [
+      { "txn_id": "TXN-90001", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 990000, "currency": "INR", "timestamp": "2026-06-02T10:14:00", "typology_flag": "structuring" },
+      { "txn_id": "TXN-90002", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 985000, "currency": "INR", "timestamp": "2026-06-02T15:42:00", "typology_flag": "structuring" },
+      { "txn_id": "TXN-90003", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 992500, "currency": "INR", "timestamp": "2026-06-03T09:05:00", "typology_flag": "structuring" },
+      { "txn_id": "TXN-90004", "from_account": "ACC-1002", "to_account": "ACC-2044", "amount": 988000, "currency": "INR", "timestamp": "2026-06-03T11:37:00", "typology_flag": "structuring" },
+      { "txn_id": "TXN-90005", "from_account": "ACC-1002", "to_account": "ACC-2044", "amount": 995000, "currency": "INR", "timestamp": "2026-06-04T10:02:00", "typology_flag": "structuring" },
+      { "txn_id": "TXN-90006", "from_account": "ACC-1001", "to_account": "ACC-2044", "amount": 979000, "currency": "INR", "timestamp": "2026-06-04T16:48:00", "typology_flag": "structuring" }
+    ],
+    "graph_edges": [
+      { "source": "ACC-1001", "target": "ACC-2044", "relation": "SENT", "weight": 4 },
+      { "source": "ACC-1002", "target": "ACC-2044", "relation": "SENT", "weight": 2 },
+      { "source": "ACC-1001", "target": "PAN-AABCX1234F", "relation": "LINKED_PAN", "weight": 1 },
+      { "source": "ACC-1002", "target": "PAN-AABCX1234F", "relation": "LINKED_PAN", "weight": 1 },
+      { "source": "ACC-1001", "target": "PER-RAVI-MENON", "relation": "OWNED_BY", "weight": 1 },
+      { "source": "ACC-1002", "target": "PER-RAVI-MENON", "relation": "OWNED_BY", "weight": 1 },
+      { "source": "ACC-2044", "target": "PER-DINESH-KHATRI", "relation": "OWNED_BY", "weight": 1 }
+    ],
+    "entities": [
+      { "id": "ACC-1001", "type": "Account", "name": "SB A/c ...41001", "owner_pan": "AABCX1234F", "director_of": null },
+      { "id": "ACC-1002", "type": "Account", "name": "CA A/c ...41002", "owner_pan": "AABCX1234F", "director_of": null },
+      { "id": "ACC-2044", "type": "Account", "name": "SB A/c ...52044", "owner_pan": "AFZPK7190K", "director_of": null },
+      { "id": "PAN-AABCX1234F", "type": "PAN", "name": "AABCX1234F", "owner_pan": null, "director_of": null },
+      { "id": "PER-RAVI-MENON", "type": "Person", "name": "Ravi Menon", "owner_pan": "AABCX1234F", "director_of": null },
+      { "id": "PER-DINESH-KHATRI", "type": "Person", "name": "Dinesh Khatri", "owner_pan": "AFZPK7190K", "director_of": null }
+    ]
+  },
+  {
+    "case_id": "CASE-002",
+    "risk": { "p": 0.84, "margin": 0.68, "ood": 2.1 },
+    "risk_band": "RED",
+    "member_alert_ids": ["ALR-2301", "ALR-2305", "ALR-2308", "ALR-2312"],
+    "accounts": ["ACC-3001", "ACC-3002", "ACC-3003"],
+    "transactions": [
+      { "txn_id": "TXN-91001", "from_account": "ACC-3001", "to_account": "ACC-3002", "amount": 2400000, "currency": "INR", "timestamp": "2026-06-08T11:20:00", "typology_flag": "layering" },
+      { "txn_id": "TXN-91002", "from_account": "ACC-3002", "to_account": "ACC-3003", "amount": 2380000, "currency": "INR", "timestamp": "2026-06-09T14:05:00", "typology_flag": "layering" },
+      { "txn_id": "TXN-91003", "from_account": "ACC-3003", "to_account": "ACC-3001", "amount": 2355000, "currency": "INR", "timestamp": "2026-06-11T09:44:00", "typology_flag": "layering" },
+      { "txn_id": "TXN-91004", "from_account": "ACC-3001", "to_account": "ACC-3002", "amount": 1250000, "currency": "INR", "timestamp": "2026-06-12T16:30:00", "typology_flag": "layering" },
+      { "txn_id": "TXN-91005", "from_account": "ACC-3002", "to_account": "ACC-3003", "amount": 1238000, "currency": "INR", "timestamp": "2026-06-13T10:12:00", "typology_flag": "layering" }
+    ],
+    "graph_edges": [
+      { "source": "ACC-3001", "target": "ACC-3002", "relation": "SENT", "weight": 2 },
+      { "source": "ACC-3002", "target": "ACC-3003", "relation": "SENT", "weight": 2 },
+      { "source": "ACC-3003", "target": "ACC-3001", "relation": "SENT", "weight": 1 },
+      { "source": "ACC-3002", "target": "COM-MERIDIAN", "relation": "OWNED_BY", "weight": 1 },
+      { "source": "ACC-3003", "target": "COM-KAVERI", "relation": "OWNED_BY", "weight": 1 },
+      { "source": "PER-SURESH-NAIR", "target": "COM-MERIDIAN", "relation": "DIRECTOR_OF", "weight": 1 },
+      { "source": "PER-SURESH-NAIR", "target": "COM-KAVERI", "relation": "DIRECTOR_OF", "weight": 1 },
+      { "source": "ACC-3001", "target": "PER-SURESH-NAIR", "relation": "OWNED_BY", "weight": 1 }
+    ],
+    "entities": [
+      { "id": "ACC-3001", "type": "Account", "name": "CA A/c ...63001", "owner_pan": "BLQPS8821D", "director_of": null },
+      { "id": "ACC-3002", "type": "Account", "name": "CA A/c ...63002 (Meridian Exports)", "owner_pan": "AAECM4412G", "director_of": null },
+      { "id": "ACC-3003", "type": "Account", "name": "CA A/c ...63003 (Kaveri Trading)", "owner_pan": "AAECK9034J", "director_of": null },
+      { "id": "COM-MERIDIAN", "type": "Company", "name": "Meridian Exports Pvt Ltd", "owner_pan": "AAECM4412G", "director_of": null },
+      { "id": "COM-KAVERI", "type": "Company", "name": "Kaveri Trading Co Pvt Ltd", "owner_pan": "AAECK9034J", "director_of": null },
+      { "id": "PER-SURESH-NAIR", "type": "Person", "name": "Suresh Nair", "owner_pan": "BLQPS8821D", "director_of": ["COM-MERIDIAN", "COM-KAVERI"] }
+    ]
+  },
+  {
+    "case_id": "CASE-003",
+    "risk": { "p": 0.56, "margin": 0.12, "ood": 0.9 },
+    "risk_band": "YELLOW",
+    "member_alert_ids": ["ALR-3401", "ALR-3402", "ALR-3406"],
+    "accounts": ["ACC-4101", "ACC-4102", "ACC-4103", "ACC-4104", "ACC-4105", "ACC-4106", "ACC-4500"],
+    "transactions": [
+      { "txn_id": "TXN-92001", "from_account": "ACC-4101", "to_account": "ACC-4500", "amount": 49500, "currency": "INR", "timestamp": "2026-06-15T09:10:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92002", "from_account": "ACC-4102", "to_account": "ACC-4500", "amount": 48750, "currency": "INR", "timestamp": "2026-06-15T09:26:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92003", "from_account": "ACC-4103", "to_account": "ACC-4500", "amount": 47900, "currency": "INR", "timestamp": "2026-06-15T10:02:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92004", "from_account": "ACC-4104", "to_account": "ACC-4500", "amount": 49900, "currency": "INR", "timestamp": "2026-06-15T10:44:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92005", "from_account": "ACC-4105", "to_account": "ACC-4500", "amount": 46500, "currency": "INR", "timestamp": "2026-06-15T11:18:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92006", "from_account": "ACC-4106", "to_account": "ACC-4500", "amount": 48200, "currency": "INR", "timestamp": "2026-06-15T11:55:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92007", "from_account": "ACC-4101", "to_account": "ACC-4500", "amount": 45800, "currency": "INR", "timestamp": "2026-06-16T09:31:00", "typology_flag": "smurfing" },
+      { "txn_id": "TXN-92008", "from_account": "ACC-4102", "to_account": "ACC-4500", "amount": 49100, "currency": "INR", "timestamp": "2026-06-16T10:07:00", "typology_flag": "smurfing" }
+    ],
+    "graph_edges": [
+      { "source": "ACC-4101", "target": "ACC-4500", "relation": "SENT", "weight": 2 },
+      { "source": "ACC-4102", "target": "ACC-4500", "relation": "SENT", "weight": 2 },
+      { "source": "ACC-4103", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
+      { "source": "ACC-4104", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
+      { "source": "ACC-4105", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
+      { "source": "ACC-4106", "target": "ACC-4500", "relation": "SENT", "weight": 1 },
+      { "source": "ACC-4101", "target": "PAN-DKJPM3345H", "relation": "LINKED_PAN", "weight": 1 },
+      { "source": "ACC-4102", "target": "PAN-DKJPM3345H", "relation": "LINKED_PAN", "weight": 1 },
+      { "source": "ACC-4500", "target": "PER-ASHA-VERMA", "relation": "OWNED_BY", "weight": 1 }
+    ],
+    "entities": [
+      { "id": "ACC-4101", "type": "Account", "name": "SB A/c ...74101", "owner_pan": "DKJPM3345H", "director_of": null },
+      { "id": "ACC-4102", "type": "Account", "name": "SB A/c ...74102", "owner_pan": "DKJPM3345H", "director_of": null },
+      { "id": "ACC-4103", "type": "Account", "name": "SB A/c ...74103", "owner_pan": "CWGPR6674L", "director_of": null },
+      { "id": "ACC-4104", "type": "Account", "name": "SB A/c ...74104", "owner_pan": "FHLPB2210Q", "director_of": null },
+      { "id": "ACC-4105", "type": "Account", "name": "SB A/c ...74105", "owner_pan": "GKTPD8859M", "director_of": null },
+      { "id": "ACC-4106", "type": "Account", "name": "SB A/c ...74106", "owner_pan": "HZNPC4437B", "director_of": null },
+      { "id": "ACC-4500", "type": "Account", "name": "SB A/c ...84500", "owner_pan": "EQYPV5518C", "director_of": null },
+      { "id": "PAN-DKJPM3345H", "type": "PAN", "name": "DKJPM3345H", "owner_pan": null, "director_of": null },
+      { "id": "PER-ASHA-VERMA", "type": "Person", "name": "Asha Verma", "owner_pan": "EQYPV5518C", "director_of": null }
+    ]
+  },
+  {
+    "case_id": "CASE-004",
+    "risk": { "p": 0.31, "margin": 0.38, "ood": 0.4 },
+    "risk_band": "GREEN",
+    "member_alert_ids": ["ALR-4501"],
+    "accounts": ["ACC-5001", "ACC-5002"],
+    "transactions": [
+      { "txn_id": "TXN-93001", "from_account": "ACC-5001", "to_account": "ACC-5002", "amount": 120000, "currency": "INR", "timestamp": "2026-06-20T12:00:00", "typology_flag": null },
+      { "txn_id": "TXN-93002", "from_account": "ACC-5001", "to_account": "ACC-5002", "amount": 85000, "currency": "INR", "timestamp": "2026-06-27T12:30:00", "typology_flag": null }
+    ],
+    "graph_edges": [
+      { "source": "ACC-5001", "target": "ACC-5002", "relation": "SENT", "weight": 2 }
+    ],
+    "entities": [
+      { "id": "ACC-5001", "type": "Account", "name": "SB A/c ...95001", "owner_pan": "JLMPT9921E", "director_of": null },
+      { "id": "ACC-5002", "type": "Account", "name": "SB A/c ...95002", "owner_pan": "KNRPS3364F", "director_of": null }
+    ]
+  }
+]
