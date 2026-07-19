@@ -1,4 +1,4 @@
-# SentinelAI
+# viGEMMAlya
 
 **Build with Gemma: Bengaluru AI Sprint — Track 2: Gemma Financial Compliance & Risk Triage**
 
@@ -8,11 +8,11 @@ An air-gapped AML co-investigator for small NBFCs and co-operative banks. It clu
 
 ## The problem
 
-Small NBFCs and co-op banks carry a disproportionate compliance burden under steep per-day penalties, yet cloud AML tools are off the table because customer data legally cannot leave their premises (RBI localization + DPDP). Rule-based AML systems generate 90%+ false positives. SentinelAI replaces rigid rules with a tunable, learned risk boundary that still emits a rule-legible audit trail — running entirely on-prem.
+Small NBFCs and co-op banks carry a disproportionate compliance burden under steep per-day penalties, yet cloud AML tools are off the table because customer data legally cannot leave their premises (RBI localization + DPDP). Rule-based AML systems generate 90%+ false positives. viGEMMAlya replaces rigid rules with a tunable, learned risk boundary that still emits a rule-legible audit trail — running entirely on-prem.
 
 ## Why Gemma, specifically
 
-Gemma runs entirely on-device, and SentinelAI exploits what only local weights allow:
+Gemma runs entirely on-device, and viGEMMAlya exploits what only local weights allow:
 
 - **Suspicion scoring reads Gemma's internal activations** through a trained linear probe (not a prompt), giving a calibrated, tunable decision boundary that attacks AML's false-positive problem directly.
 - **The STR is produced under GBNF grammar-constrained decoding**, so the filing physically cannot contain an invalid FIU Ground-of-Suspicion tag or a hallucinated figure — the grammar makes the conclusion tokens unreachable until the evidence array has closed.
@@ -72,7 +72,7 @@ SAML-D txns · synthetic KYC/PAN/GST · invoices · prior alerts · PMLA/RBI tex
 | Objection | Answer |
 |---|---|
 | Why not cloud AI? | RBI localization + DPDP make it non-compliant for this data, and the self-audit layer (activation probe, logprobs) is architecturally impossible on an API that only returns text. |
-| Why not a rule engine? | Rule engines are the 90%-false-positive problem. SentinelAI replaces rigidity with a tunable learned boundary that still emits a rule-legible audit trail. |
+| Why not a rule engine? | Rule engines are the 90%-false-positive problem. viGEMMAlya replaces rigidity with a tunable learned boundary that still emits a rule-legible audit trail. |
 | Why not a big model + faithfulness judge? | That's the black-box workaround teams use when they lack model weights. This is cheaper (single pass, no re-sampling), more principled (real logits, not a second model guessing), and runs on-prem. |
 | How do you cluster millions of rows? | Not with the LLM — Louvain/Leiden community detection on the transaction graph does that, with published accuracy. |
 | Will the LLM hallucinate figures into a legal filing? | The grammar locks the fields, amounts are copied from verified transactions rather than freely generated, and the heat-map flags any shaky narration before a human attests. |
@@ -114,7 +114,7 @@ Paste a SAML-D batch → dashboard collapses hundreds of alerts to 5 cases → o
 
 ## Evaluation rubric mapping
 
-| Criterion | Weight | Where SentinelAI addresses it |
+| Criterion | Weight | Where viGEMMAlya addresses it |
 |---|---|---|
 | Gemma Integration | 30% | Activation probing (not prompting) for risk scoring, GBNF grammar-constrained decoding for the STR, native token logprobs for confidence — none possible on a cloud API. |
 | Innovation & Impact | 30% | Turns hundreds of noisy alerts into a handful of investigable cases; turns hours of STR drafting into a verify-and-attest step; targets a real, underserved segment (small NBFCs/co-ops) with a real legal constraint (data localization). |
@@ -125,9 +125,9 @@ Paste a SAML-D batch → dashboard collapses hundreds of alerts to 5 cases → o
 
 **Track Selection:** Track 2 — Gemma Financial Compliance & Risk Triage.
 
-**AI & Gemma Usage:** Gemma runs entirely on-device, and SentinelAI exploits what only local weights allow. Suspicion scoring reads Gemma's internal activations through a trained linear probe (not a prompt), giving a calibrated, tunable decision boundary that attacks AML's 90%+ false-positive problem. The STR is produced under GBNF grammar-constrained decoding, so the filing physically cannot contain an invalid FIU Ground-of-Suspicion tag or a hallucinated figure. Each narration sentence is scored by Gemma's own token-level logprobs into a confidence heat-map, so the analyst sees exactly which claims to verify before attesting. None of these — activation probing, logit-masked decoding, per-token confidence — is possible against a cloud API, which exposes only text. Cloud AI is also legally impossible here: RBI bars KYC data from third-party servers. Gemma isn't a convenience; it's the only architecture that is both compliant and instrumentable.
+**AI & Gemma Usage:** Gemma runs entirely on-device, and viGEMMAlya exploits what only local weights allow. Suspicion scoring reads Gemma's internal activations through a trained linear probe (not a prompt), giving a calibrated, tunable decision boundary that attacks AML's 90%+ false-positive problem. The STR is produced under GBNF grammar-constrained decoding, so the filing physically cannot contain an invalid FIU Ground-of-Suspicion tag or a hallucinated figure. Each narration sentence is scored by Gemma's own token-level logprobs into a confidence heat-map, so the analyst sees exactly which claims to verify before attesting. None of these — activation probing, logit-masked decoding, per-token confidence — is possible against a cloud API, which exposes only text. Cloud AI is also legally impossible here: RBI bars KYC data from third-party servers. Gemma isn't a convenience; it's the only architecture that is both compliant and instrumentable.
 
-**Project Idea:** Small NBFCs and co-op banks carry a 3–5× compliance burden under ₹10 lakh/day penalties, yet cloud AML tools are off-limits because customer data can't leave their premises. SentinelAI is an air-gapped co-investigator that clusters raw transactions into connected cases via graph community detection, reconstructs each case's timeline and entity graph, reads scanned evidence with Gemma's vision tower, suggests investigative next steps, cites the relevant PMLA/RBI provision, and drafts a filing-locked FIU-IND STR whose every sentence is heat-mapped by the model's own confidence. Target users: compliance/MLRO teams at India's small reporting entities. Impact: turns hundreds of noisy alerts into a handful of investigable cases, and turns hours of STR drafting into a verify-and-attest step — without a single byte leaving the building.
+**Project Idea:** Small NBFCs and co-op banks carry a 3–5× compliance burden under ₹10 lakh/day penalties, yet cloud AML tools are off-limits because customer data can't leave their premises. viGEMMAlya is an air-gapped co-investigator that clusters raw transactions into connected cases via graph community detection, reconstructs each case's timeline and entity graph, reads scanned evidence with Gemma's vision tower, suggests investigative next steps, cites the relevant PMLA/RBI provision, and drafts a filing-locked FIU-IND STR whose every sentence is heat-mapped by the model's own confidence. Target users: compliance/MLRO teams at India's small reporting entities. Impact: turns hundreds of noisy alerts into a handful of investigable cases, and turns hours of STR drafting into a verify-and-attest step — without a single byte leaving the building.
 
 ## Known limitations / roadmap
 

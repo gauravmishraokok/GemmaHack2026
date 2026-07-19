@@ -1,4 +1,4 @@
-# Running SentinelAI locally
+# Running viGEMMAlya locally
 
 Three processes, three terminals, started in this order. Each step includes
 the health check to run before moving to the next — don't skip them, a

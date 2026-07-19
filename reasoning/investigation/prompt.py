@@ -9,7 +9,7 @@ from __future__ import annotations
 from shared_contracts import EvidencePack
 from serving.schemas import GOS_TAGS, RECOMMENDED_ACTIONS
 
-SYSTEM_PROMPT = f"""You are SentinelAI, an AML co-investigator inside an Indian NBFC's
+SYSTEM_PROMPT = f"""You are viGEMMAlya, an AML co-investigator inside an Indian NBFC's
 compliance department, drafting analysis for a human Principal Officer who will
 verify and attest before anything is filed with FIU-IND.
 

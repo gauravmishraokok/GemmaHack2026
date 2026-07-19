@@ -25,7 +25,7 @@ export default function App() {
               ◉
             </div>
             <div>
-              <div className="text-sm font-semibold tracking-wide">SentinelAI</div>
+              <div className="text-sm font-semibold tracking-wide">viGEMMAlya</div>
               <div className="text-[11px] text-[var(--ink-muted)]">
                 Air-gapped AML co-investigator · reasoning plane
               </div>

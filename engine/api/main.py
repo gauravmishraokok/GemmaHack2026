@@ -1,5 +1,5 @@
 """
-SentinelAI Engine API — Port 8001 (serve mode).
+viGEMMAlya Engine API — Port 8001 (serve mode).
 Run: uvicorn engine.api.main:app --port 8001 --reload
 
 Serves the interface contract exactly: Case / CaseSummary / ComparisonMetric,
@@ -28,7 +28,7 @@ from shared_contracts import (
     RiskScore, SharedPanGroup, AlertDetail,
 )
 
-app = FastAPI(title="SentinelAI Engine", version="2.0.0")
+app = FastAPI(title="viGEMMAlya Engine", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,

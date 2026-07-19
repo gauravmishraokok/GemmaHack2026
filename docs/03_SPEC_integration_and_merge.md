@@ -9,7 +9,7 @@ Do not start this until both Spec Card 1 and Spec Card 2 have hit their "Definit
 ## 1. Repo layout (target state)
 
 ```
-sentinelai/
+viGEMMAlya/
   shared_contracts.py       # frozen since day 0, both services import it unchanged
   engine/                   # Person 1's code, untouched
   reasoning/                # Person 2's code, untouched

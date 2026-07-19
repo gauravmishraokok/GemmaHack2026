@@ -1,5 +1,5 @@
 """
-SentinelAI — XGBoost Training Script for Kaggle
+viGEMMAlya — XGBoost Training Script for Kaggle
 ================================================
 Paste this entire file into a Kaggle notebook (Code cell).
 Run it on the "IBM Transactions for Anti Money Laundering (AML)" dataset.

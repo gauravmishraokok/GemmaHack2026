@@ -1,4 +1,4 @@
-# SentinelAI — Reasoning & Investigation Service (Person 2, port 8002)
+# viGEMMAlya — Reasoning & Investigation Service (Person 2, port 8002)
 
 Takes a `Case`, assembles an evidence pack, reasons over it with **gemma4 via
 Ollama under schema-constrained decoding**, scores every STR sentence with

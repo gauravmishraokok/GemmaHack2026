@@ -1,4 +1,4 @@
-# SentinelAI — Engine (Person 1) Status Document
+# viGEMMAlya — Engine (Person 1) Status Document
 
 > **Date:** 2026-07-18  
 > **Branch:** main  
@@ -23,7 +23,7 @@
 
 ## 1. System Overview
 
-SentinelAI is an Anti-Money Laundering (AML) detection system split into two services:
+viGEMMAlya is an Anti-Money Laundering (AML) detection system split into two services:
 
 | Service | Port | Responsibility |
 |---------|------|----------------|

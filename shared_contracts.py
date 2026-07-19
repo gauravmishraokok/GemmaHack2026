@@ -1,5 +1,5 @@
 """
-SentinelAI — Shared Contract Models
+viGEMMAlya — Shared Contract Models
 =====================================
 Single source of truth for the Person 1 (engine :8001) → Person 2
 (reasoning :8002) interface. Matches the INTERFACE CONTRACT doc §3 exactly.

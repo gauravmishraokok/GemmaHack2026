@@ -1,4 +1,4 @@
-"""SentinelAI reasoning service — FastAPI app (port 8002).
+"""viGEMMAlya reasoning service — FastAPI app (port 8002).
 
 Contract endpoints (SPEC card 2 §7) return shared_contracts models exactly.
 Extra endpoints (/investigate/{id}/full, /schema/str, /audit/*) serve the
@@ -6,12 +6,14 @@ frontend richer views without touching the frozen contract.
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import time
 from typing import Any, Dict, List, Optional
 
-from fastapi import Body, FastAPI, HTTPException, Query
+from fastapi import Body, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
 import config
@@ -30,10 +32,12 @@ from evidence.regulations import RegulationStore
 from investigation.pipeline import investigate
 from export.fiu_xml import build_str_xml
 from export import audit_log
+from export.notify import notify_export
 from api.case_store import CaseStore
+from api.events import bus
 
 app = FastAPI(
-    title="SentinelAI — Reasoning & Investigation Service",
+    title="viGEMMAlya — Reasoning & Investigation Service",
     version="1.0.0",
     description="Evidence construction, Gemma reasoning under constrained decoding, "
     "confidence heat-map, STR drafting, FIU export. Air-gapped by design.",
@@ -78,6 +82,52 @@ def health():
     }
 
 
+# -------------------------------------------------------- live pipeline ----
+@app.get("/events/stream")
+async def events_stream(request: Request, case_id: Optional[str] = Query(None)):
+    """Server-Sent Events feed of real pipeline stage transitions.
+
+    Powers the frontend's live pipeline visualization — every event here is
+    published from investigation/pipeline.py as the actual investigate() call
+    progresses through evidence build -> gate -> Gemma -> grounding ->
+    confidence, not a simulated/timed animation. Optionally filter to one
+    case_id; omit it to watch every investigation running on this server.
+    """
+    q = bus.subscribe()
+
+    async def gen():
+        try:
+            # replay recent history first so a client that connects mid-run
+            # (or right after refreshing the page) isn't starting blind
+            for e in bus.recent(case_id=case_id, limit=50):
+                yield f"data: {json.dumps(e)}\n\n"
+            while True:
+                if await request.is_disconnected():
+                    break
+                try:
+                    event = await asyncio.get_event_loop().run_in_executor(None, q.get, True, 15)
+                except Exception:  # noqa: BLE001 — queue.Empty on timeout
+                    yield ": keepalive\n\n"
+                    continue
+                if case_id and event.case_id != case_id:
+                    continue
+                yield f"data: {json.dumps(event.to_json())}\n\n"
+        finally:
+            bus.unsubscribe(q)
+
+    return StreamingResponse(
+        gen(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+@app.get("/events/recent")
+def events_recent(case_id: Optional[str] = Query(None), limit: int = Query(50, ge=1, le=200)):
+    """Non-streaming fallback: last N pipeline events, polled instead of SSE."""
+    return bus.recent(case_id=case_id, limit=limit)
+
+
 # ----------------------------------------------------------------- cases ----
 @app.get("/cases", response_model=List[CaseSummary])
 def list_cases(threshold: Optional[float] = Query(None, ge=0, le=1)):
@@ -96,7 +146,13 @@ def get_case(case_id: str):
 @app.post("/evidence/{case_id}", response_model=EvidencePack)
 def evidence(case_id: str, body: Optional[Case] = Body(default=None)):
     case = _resolve_case(case_id, body)
+    bus.emit(case_id, "evidence_build", "start", "Assembling evidence pack from case data")
     pack = build_evidence_pack(case, reg_store)
+    bus.emit(
+        case_id, "evidence_build", "ok",
+        f"{len(pack.evidence)} evidence items, {len(pack.relationships)} relationships",
+        evidence_count=len(pack.evidence), relationship_count=len(pack.relationships),
+    )
     audit_log.append("EVIDENCE_ASSEMBLED", case_id, actor="system",
                      detail={"items": len(pack.evidence), "missing": pack.missing_evidence})
     return pack
@@ -107,9 +163,14 @@ def evidence(case_id: str, body: Optional[Case] = Body(default=None)):
 def run_investigation(case_id: str, body: Optional[Case] = Body(default=None)):
     case = _resolve_case(case_id, body)
     t0 = time.time()
+
+    def emit(stage: str, status: str, detail: str = "", **meta: Any) -> None:
+        bus.emit(case_id, stage, status, detail, **meta)
+
     try:
-        result, pack, diag = investigate(case, llm, reg_store)
+        result, pack, diag = investigate(case, llm, reg_store, emit=emit)
     except Exception as e:  # noqa: BLE001
+        emit("error", "fail", f"{type(e).__name__}: {e}")
         raise HTTPException(
             503,
             f"Investigation failed ({type(e).__name__}: {e}). "
@@ -149,12 +210,14 @@ def regulations_search(q: str = Query(..., min_length=2), k: int = Query(3, ge=1
 class ExportResponse(BaseModel):
     xml: str
     audit_entry: Dict[str, Any]
+    notifications: Dict[str, Any] = {}
 
 
 @app.post("/export/{case_id}", response_model=ExportResponse)
 def export_str(case_id: str, draft: STRDraft, actor: str = Query("analyst")):
     if draft.case_id != case_id:
         raise HTTPException(422, "case_id in path and STRDraft body disagree")
+    bus.emit(case_id, "export", "start", f"Exporting FIU-IND XML, attested by {actor}")
     xml = build_str_xml(draft, attested_by=actor)
     out_path = config.EXPORT_DIR / f"STR_{case_id}.xml"
     out_path.write_text(xml, encoding="utf-8")
@@ -164,7 +227,15 @@ def export_str(case_id: str, draft: STRDraft, actor: str = Query("analyst")):
                 "file": str(out_path)},
         evidence_refs=draft.evidence_refs,
     )
-    return ExportResponse(xml=xml, audit_entry=entry)
+    notifications = notify_export(draft, xml, entry, actor)
+    email_note = notifications.get("email", {}).get("status", "skipped")
+    sms_note = notifications.get("sms", {}).get("status", "skipped")
+    bus.emit(
+        case_id, "export", "ok",
+        f"Audit entry #{entry['seq']} written · email {email_note} · sms {sms_note}",
+        seq=entry["seq"],
+    )
+    return ExportResponse(xml=xml, audit_entry=entry, notifications=notifications)
 
 
 # ----------------------------------------------------------------- audit ----

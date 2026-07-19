@@ -1,4 +1,4 @@
-# SentinelAI — Project Writeup
+# viGEMMAlya — Project Writeup
 
 **Build with Gemma: Bengaluru AI Sprint — Track 2: Gemma Financial Compliance & Risk Triage**
 
@@ -19,7 +19,7 @@ Two structural constraints make this worse, not better, for smaller institutions
 - **Rule-based AML systems generate 90%+ false positives.** A rigid rule engine (flag anything over ₹10 lakh, flag anything from a "high-risk" jurisdiction) buries a small compliance team in noise, and every alert still requires a human to manually reconstruct the transaction history, entity relationships, and applicable regulation before they can even decide if it's worth investigating.
 - **Cloud AI is legally off the table.** RBI's data localization rules and India's DPDP Act mean customer KYC and transaction data legally cannot leave the institution's premises to reach a third-party cloud API. This rules out ChatGPT-style AML copilots outright for this segment — not as a preference, but as a compliance requirement.
 
-The result: small reporting entities are stuck choosing between a rule engine that drowns them in false positives, or a manual process that doesn't scale. SentinelAI targets exactly this gap — a **fully on-premise, air-gapped co-investigator** that turns hundreds of raw transaction alerts into a handful of investigable cases, reconstructs the evidence around each one automatically, and drafts a legally-structured STR with every claim traceable back to source data — running entirely on hardware the institution already owns, with nothing sent to the cloud.
+The result: small reporting entities are stuck choosing between a rule engine that drowns them in false positives, or a manual process that doesn't scale. viGEMMAlya targets exactly this gap — a **fully on-premise, air-gapped co-investigator** that turns hundreds of raw transaction alerts into a handful of investigable cases, reconstructs the evidence around each one automatically, and drafts a legally-structured STR with every claim traceable back to source data — running entirely on hardware the institution already owns, with nothing sent to the cloud.
 
 ---
 
@@ -67,7 +67,7 @@ The compliance burden this creates is disproportionate: a small institution proc
 
 ## 💡 Solution
 
-**SentinelAI** is a two-plane, fully on-premise AML co-investigator:
+**viGEMMAlya** is a two-plane, fully on-premise AML co-investigator:
 
 1. **Batch plane (engine, :8001) — turns a raw transaction feed into a short list of investigable cases.** A cheap rule-engine first pass flags obviously suspicious accounts (velocity, near-threshold structuring, repeated near-threshold transfers between the same pair); an XGBoost model trained on 5M+ labeled transactions refines that flag into a per-transaction anomaly score; a transaction-only graph is built from the surviving transactions and clustered with Louvain community detection, collapsing what started as thousands of individual alerts into a handful of coherent cases; a Gemma activation probe reads the case's own internal representation to produce a calibrated risk score, benchmarked live against the XGBoost and naive-rule-count baselines it's meant to beat.
 

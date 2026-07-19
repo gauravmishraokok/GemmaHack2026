@@ -1,4 +1,4 @@
-# SentinelAI — Analyst Dashboard
+# viGEMMAlya — Analyst Dashboard
 
 React + Vite + Tailwind v4 + Recharts. Dark command-center UI for the AML
 analyst: triage dashboard → case view (Timeline / Graph / Evidence /

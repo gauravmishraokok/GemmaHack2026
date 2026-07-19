@@ -1,5 +1,5 @@
 """
-SentinelAI Engine — Seed pipeline (Phases 1-10).
+viGEMMAlya Engine — Seed pipeline (Phases 1-10).
 
 Flow (see ENGINE_STATUS.md / interface contract):
   1.  Load raw IBM AML transactions (stratified sample optional)

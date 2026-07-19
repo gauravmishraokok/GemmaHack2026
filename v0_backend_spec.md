@@ -1,7 +1,7 @@
-# SentinelAI — Backend API Specification (for v0 frontend generation)
+# viGEMMAlya — Backend API Specification (for v0 frontend generation)
 
 This document is the complete, standalone contract for building a new frontend
-against the SentinelAI backend. It covers **both services** — the Engine
+against the viGEMMAlya backend. It covers **both services** — the Engine
 (static/batch plane, port **8001**) and the Reasoning service (dynamic/interactive
 plane, port **8002**) — because a v0 frontend talks to both.
 

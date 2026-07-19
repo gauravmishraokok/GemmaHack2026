@@ -1,5 +1,5 @@
 """
-SentinelAI reasoning service configuration.
+viGEMMAlya reasoning service configuration.
 
 Everything is env-var driven so integration day is a config change, not a
 code change ("swap the wire, not the code" — SPEC card 3).
@@ -8,6 +8,16 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
+
+# Tiny .env loader (no python-dotenv dependency): real env vars always win,
+# the gitignored reasoning/.env supplies secrets so they never enter the repo.
+_env_file = BASE_DIR / ".env"
+if _env_file.exists():
+    for _line in _env_file.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
 
 # --- Ollama (local, air-gapped) -------------------------------------------
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
@@ -60,3 +70,13 @@ YELLOW_THRESHOLD = 0.4
 # --- Confidence bands (SPEC card 2, phase C) --------------------------------
 GREEN_BAND = 0.75
 YELLOW_BAND = 0.50
+
+# --- Attest/export notifications (email via Resend, SMS via Twilio) ---------
+# Secrets live in the gitignored reasoning/.env, never in this file.
+RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
+REPORT_EMAIL_TO = os.getenv("REPORT_EMAIL_TO", "")
+REPORT_EMAIL_FROM = os.getenv("REPORT_EMAIL_FROM", "onboarding@resend.dev")
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "")
+TWILIO_FROM_NUMBER = os.getenv("TWILIO_FROM_NUMBER", "")  # trial number, +E.164
+TWILIO_TO_NUMBER = os.getenv("TWILIO_TO_NUMBER", "")      # verified number, +E.164

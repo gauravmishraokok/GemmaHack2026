@@ -15,7 +15,7 @@ from xml.dom import minidom
 from shared_contracts import STRDraft
 
 REPORTING_ENTITY = {
-    "name": "Demo Cooperative Bank Ltd (SentinelAI)",
+    "name": "Demo Cooperative Bank Ltd (viGEMMAlya)",
     "fiu_re_id": "REDEMO0001",
     "category": "Cooperative Bank",
     "principal_officer": "Principal Officer (attesting analyst)",
@@ -23,7 +23,7 @@ REPORTING_ENTITY = {
 
 
 def build_str_xml(draft: STRDraft, attested_by: str = "analyst") -> str:
-    root = ET.Element("STRBatch", version="1.0", generator="SentinelAI-reasoning")
+    root = ET.Element("STRBatch", version="1.0", generator="viGEMMAlya-reasoning")
 
     header = ET.SubElement(root, "ReportHeader")
     ET.SubElement(header, "ReportType").text = "STR"
@@ -62,7 +62,7 @@ def build_str_xml(draft: STRDraft, attested_by: str = "analyst") -> str:
     ET.SubElement(attest, "AttestedBy").text = attested_by
     ET.SubElement(attest, "AttestedAt").text = datetime.now(timezone.utc).isoformat()
     ET.SubElement(attest, "Statement").text = (
-        "This report was drafted by SentinelAI under schema-constrained decoding "
+        "This report was drafted by viGEMMAlya under schema-constrained decoding "
         "and verified sentence-by-sentence by the attesting officer."
     )
 
