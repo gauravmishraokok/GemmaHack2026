@@ -357,8 +357,6 @@ Seed a transaction batch → dashboard collapses hundreds of alerts into a handf
 
 ## Further reading
 
-- [`change.md`](change.md) — every place the build deviated from the original spec, and why.
-- [`v0_backend_spec.md`](v0_backend_spec.md) — full API reference with real captured payloads.
 - [`writeup.md`](writeup.md) / [`devfolio_content.md`](devfolio_content.md) — the full project write-up and submission-form copy.
 - [`RUNNING.md`](RUNNING.md) — step-by-step local run guide with health checks and recovery steps.
 - [`static_plane_diagrams/`](static_plane_diagrams/) and [`dynamic_plane_diagrams/`](dynamic_plane_diagrams/) — the phase-by-phase design docs behind the two architecture diagrams above.
